@@ -1,11 +1,12 @@
-/* Mouse memorris */
-@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&display=swap');
+@import url(./font-family.css);
 
-/* Raleway */
-@import url('https://fonts.googleapis.com/css2?family=Mouse+Memoirs&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
-
-/* Montserrat */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Mouse+Memoirs&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+/* Define CSS variables */
+:root {
+    --padding: 20px; 
+    --margin-top: 20px; 
+    --button-padding: 10px 40px; 
+    --footer-padding: 20px; 
+}
 
 html, body {
     width: 100%;
@@ -20,14 +21,14 @@ html, body {
 
 body {
     box-sizing: border-box;
-    padding: 20px;
+    padding: var(--padding);
     background-image: url(/asset/image-landing-page/Desktop-background-landing-page.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
+    justify-content: space-between;
     min-height: 100vh;
 }
 
@@ -36,7 +37,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1; 
+    flex: 1;
 }
 
 h1 {
@@ -48,27 +49,27 @@ h1 {
 }
 
 .border {
-    margin-top: 20px;
+    margin-top: var(--margin-top);
 }
 
 button {
-    padding: 10px 40px; 
+    padding: var(--button-padding);
     border-radius: 25px;
     border: 2px solid #F5F5F5;
     background-color: #3ABEF9;
     cursor: pointer;
     font-size: 24px;
-    font-family: 'Raleway', sans-serif; 
-    display: flex; 
-    align-items: center; 
+    font-family: 'Raleway', sans-serif;
+    display: flex;
+    align-items: center;
 }
 
 button a {
     color: #FFF;
     text-decoration: none;
     font-weight: bold;
-    display: flex; 
-    align-items: center; 
+    display: flex;
+    align-items: center;
 }
 
 button:hover {
@@ -76,14 +77,14 @@ button:hover {
 }
 
 .arrow-icon {
-    width: 24px; 
-    height: 24px; 
-    margin-right: 10px; 
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
 }
 
 footer {
     text-align: end;
-    padding: 20px;
+    padding: var(--footer-padding);
     width: 100%;
     font-family: 'Montserrat', sans-serif;
     font-weight: 100;
@@ -99,11 +100,11 @@ footer {
         font-size: 36px;
     }
     .arrow-icon {
-        width: 32px; 
-        height: 32px; 
+        width: 32px;
+        height: 32px;
     }
     footer {
-        font-size: 24px; 
+        font-size: 24px;
     }
 }
 
@@ -115,7 +116,7 @@ footer {
         font-size: 48px;
     }
     .arrow-icon {
-        width: 48px; 
-        height: 48px; 
+        width: 48px;
+        height: 48px;
     }
 }
