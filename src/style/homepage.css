@@ -1,0 +1,129 @@
+@import url(/src/style/font-family.css);
+
+/* Define CSS variables */
+:root {
+    --background-color: #4E8FE7;
+    --text-color: white;
+    --font-family: 'Montserrat', sans-serif;
+    --font-weight: bold;
+    --greeting-font-size: 20px;
+    --diary-font-size: 36px;
+    --profile-pic-size: 40px;
+    --svg-margin-right: 10px;
+    --greeting-padding-top: 10px;
+    --footer-font-size: 16px;
+    --footer-padding: 20px;
+}
+
+body, header {
+    margin: 0;
+    padding: 0;
+}
+
+.header-background {
+    background-color: var(--background-color);
+    padding: 20px;
+    margin: 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--text-color);
+    font-family: var(--font-family);
+    font-weight: var(--font-weight);
+}
+
+.greeting {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-size: var(--greeting-font-size);
+}
+
+.greeting p {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding-top: var(--greeting-padding-top);
+}
+
+.greeting svg {
+    margin-right: var(--svg-margin-right);
+}
+
+.greeting-message {
+    text-decoration: underline;
+}
+
+.diary-center {
+    font-size: var(--diary-font-size);
+    margin-bottom: 2vh;
+    text-decoration: underline;
+}
+
+.profile-pic {
+    width: var(--profile-pic-size);
+    height: var(--profile-pic-size);
+    overflow: hidden;
+    border-radius: 50%;
+    margin-bottom: 1vh;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 1024px) {
+    .diary-center{
+        display: none;
+        transition: 0.2s;
+    }
+}
+
+/* Footer: footer background */
+footer {
+    padding: var(--footer-padding); /* Apply the variable for footer padding */
+    background-color: #545F71;
+    font-family: var(--font-family);
+    font-size: var(--footer-font-size);
+    color: var(--text-color);
+}
+
+.svg-icon {
+    display: flex;
+    gap: 10px;
+}
+
+.social-link {
+    display: flex;
+    justify-content: space-between;
+}
+
+.personal-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    color: var(--text-color);
+}
+
+.location-info {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.location-info > p {
+    position: relative;
+    top: 5px;
+    color: var(--text-color);
+}
+
+a {
+    text-decoration: none;
+}
