@@ -1,20 +1,36 @@
+/* Import font */
 @import url(/src/style/font-family.css);
 
 /* Define CSS variables */
 :root {
     --background-color: #4E8FE7;
-    --text-color: white;
+    --text-color: #F5F5F5;
     --font-family: 'Montserrat', sans-serif;
-    --font-weight: bold;
-    --greeting-font-size: 20px;
-    --diary-font-size: 36px;
+    --font-family-raleway: 'Raleway', sans-serif;
+    --font-weight-bold: bold;
+    --font-weight-normal: normal;
+    --font-size-small: 14px;
+    --font-size-medium: 20px;
+    --font-size-large: 36px;
     --profile-pic-size: 40px;
     --svg-margin-right: 10px;
     --greeting-padding-top: 10px;
     --footer-font-size: 16px;
     --footer-padding: 20px;
+    --clock-background: rgba(0, 0, 0, 0.319);
+    --clock-border-radius: 10px;
+    --clock-width-desktop: 400px;
+    --clock-height-desktop: 100px;
+    --clock-width-tablet: 300px;
+    --clock-height-tablet: 80px;
+    --clock-width-mobile: 250px;
+    --clock-height-mobile: 60px;
+    --gap-small: 10px;
+    --gap-medium: 20px;
+    --gap-large: 30px;
 }
 
+/* Header */
 body, header {
     margin: 0;
     padding: 0;
@@ -32,15 +48,14 @@ body, header {
     align-items: center;
     color: var(--text-color);
     font-family: var(--font-family);
-    font-weight: var(--font-weight);
+    font-weight: var(--font-weight-bold);
 }
 
 .greeting {
     display: flex;
     flex-direction: column;
     margin: 0;
-    padding: 0;
-    font-size: var(--greeting-font-size);
+    font-size: var(--font-size-medium);
 }
 
 .greeting p {
@@ -59,8 +74,8 @@ body, header {
 }
 
 .diary-center {
-    font-size: var(--diary-font-size);
-    margin-bottom: 2vh;
+    font-size: var(--font-size-large);
+    margin-bottom: var(--gap-medium);
     text-decoration: underline;
 }
 
@@ -69,7 +84,7 @@ body, header {
     height: var(--profile-pic-size);
     overflow: hidden;
     border-radius: 50%;
-    margin-bottom: 1vh;
+    margin-bottom: var(--gap-small);
 }
 
 .profile-pic img {
@@ -79,15 +94,402 @@ body, header {
 }
 
 @media (max-width: 1024px) {
-    .diary-center{
+    .diary-center {
         display: none;
         transition: 0.2s;
     }
 }
 
-/* Footer: footer background */
+@media (max-width: 390px) {
+    .greeting {
+        font-size: var(--font-size-small);
+    }
+}
+
+/* Section: hero section */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap-medium);
+    align-items: center; /* Center items horizontally */
+    position: relative; /* Make container relative for absolute positioning */
+}
+
+.image-container {
+    flex: 1;
+    width: 100%; /* Ensure full width */
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute; /* Keep clock absolutely positioned */
+    top: 20%; /* Adjust as needed */
+    left: 50%; /* Adjust as needed */
+    transform: translate(-50%, -20%);
+    color: #fff;
+    font-family: var(--font-family);
+    z-index: 2; 
+}
+
+.clock {
+    width: var(--clock-width-desktop); 
+    height: var(--clock-height-desktop); 
+    background: var(--clock-background);
+    border-radius: var(--clock-border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--gap-small);
+}
+
+.clock span {
+    font-size: 50px; 
+    display: inline-block;
+    text-align: center;
+    position: relative;
+}
+
+.clock span::after {
+    font-size: 12px; 
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+#hrs::after {
+    content: 'HOURS';
+}
+
+#mints::after {
+    content: 'MINS';
+}
+
+#sec::after {
+    content: 'SEC';
+}
+
+@media (max-width: 1024px) {
+    .clock {
+        width: var(--clock-width-tablet); 
+        height: var(--clock-height-tablet); 
+    }
+
+    .clock span {
+        font-size: 40px; 
+    }
+
+    .clock span::after {
+        font-size: 10px; 
+    }
+}
+
+@media (max-width: 390px) {
+    .clock {
+        width: var(--clock-width-mobile); 
+        height: var(--clock-height-mobile); 
+    }
+
+    .clock span {
+        font-size: 30px; 
+    }
+
+    .clock span::after {
+        font-size: 8px; 
+    }
+}
+
+/* Diary: diary button */
+.diary-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    z-index: 2;
+    margin-top: var(--gap-medium); /* Space between clock and CRUD */
+}
+
+.diary-text {
+    text-align: center;
+    color: #F5F5F5;
+    font-family: var(--font-family-raleway);
+}
+
+.big-box {
+    width: 450px;
+    height: 200px;
+    background-color: #A7E6FF;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.inner-box h2 {
+    text-decoration: underline;
+}
+
+.add-task {
+    margin-top: 10px;
+    text-align: center;
+    width: 280px;
+    background-color: #3ABEF9;
+    border-radius: 50px;
+}
+
+.add-task h2 {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 246, 246);
+    font-size: var(--font-size-medium);
+}
+
+.add-task svg {
+    margin-left: 10px;
+    color: white;
+}
+
+svg path {
+    fill: rgb(255, 255, 255);
+}
+
+@media (max-width: 1024px) {
+    .diary-button {
+        top: 30%;
+    }
+    .big-box {
+        width: 250px;
+        height: 160px;
+    }
+    .inner-box h2 {
+        font-size: 18px;
+    }
+    .add-task {
+        width: 220px;
+    }
+    .add-task h2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 390px) {
+    .diary-button {
+        margin-top: -10%;
+    }
+    .big-box {
+        width: 100px;
+        background-color: transparent;
+    }
+    .inner-box h2 {
+        font-size: 20px;
+    }
+    .add-task {
+        margin-top: 0;
+        width: 150px;
+    }
+    .add-task h2 {
+        font-size: 14px;
+    }
+    .diary-text {
+        font-size: var(--font-size-small);
+    }
+}
+
+
+.big-box {
+    width: 450px;
+    height: 200px;
+    background-color: #A7E6FF;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.inner-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}
+
+.inner-box h2 {
+    text-decoration: underline;
+}
+
+.add-task {
+    margin-top: 10px;
+    text-align: center;
+    width: 280px;
+    background-color: #3ABEF9;
+    border-radius: 50px;
+}
+
+.add-task h2 {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 246, 246);
+    font-size: var(--font-size-medium);
+}
+
+.add-task svg {
+    margin-left: 10px;
+}
+
+
+@media (max-width: 1024px) {
+    .diary-button {
+        top: 30%;
+    }
+    .big-box {
+        width: 250px;
+        height: 160px;
+    }
+    .inner-box h2 {
+        font-size: 18px;
+    }
+    .add-task {
+        width: 220px;
+    }
+    .add-task h2 {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 390px) {
+    .diary-button {
+        top: 32%;
+    }
+    .big-box {
+        width: 100px;
+       background-color: transparent;
+    }
+    .inner-box h2 {
+        font-size: 20px;
+    }
+    .add-task {
+        margin-top: 0;
+        width: 150px;
+    }
+    .add-task h2 {
+        font-size: 14px;
+    }
+    .diary-text {
+        font-size: var(--font-size-small);
+    }
+}
+
+/* CRUD: create, read, update, delete  */
+.outer-box {
+    width: 400px;
+    padding: 20px;
+    margin: 20px;
+    background-color: #3ABEF9;
+    border-radius: 16px;
+    position: relative; /* Use relative positioning for SCRUD box */
+    z-index: -1;
+}
+
+.crud {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: #3ABEF9;
+    border-radius: 16px;
+}
+
+.outside-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Space between individual inputs */
+}
+
+.edit-svg {
+    display: flex;
+    gap: 10px;
+}
+
+.input-with-icon {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.input-with-icon textarea {
+    flex: 1; /* Allow the textarea to expand to fill available space */
+}
+
+.input-with-icon > input[type="text"],
+.input-with-icon > textarea,
+.input-container > div > input[type="text"] {
+    padding: 10px;
+    border-radius: 16px;
+    border: 1px solid #ccc; /* Example border style */
+    box-sizing: border-box;
+    justify-content: space-between;
+}
+
+#text-area {
+    width: 100%; /* Use full width available */
+    height: 120px;
+    border-radius: 8px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+svg {
+    fill: black;
+    width: 24px; /* Adjust SVG size as needed */
+    height: 24px;
+}
+
+
+/* Footer */
 footer {
-    padding: var(--footer-padding); /* Apply the variable for footer padding */
+    padding: var(--footer-padding);
     background-color: #545F71;
     font-family: var(--font-family);
     font-size: var(--footer-font-size);
@@ -96,7 +498,7 @@ footer {
 
 .svg-icon {
     display: flex;
-    gap: 10px;
+    gap: var(--gap-medium);
 }
 
 .social-link {
@@ -104,16 +506,20 @@ footer {
     justify-content: space-between;
 }
 
+.social-link img {
+    width: 150px;
+}
+
 .personal-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 20px;
+    padding-top: var(--gap-medium);
     color: var(--text-color);
 }
 
 .location-info {
-    gap: 10px;
+    gap: var(--gap-small);
     display: flex;
     align-items: center;
 }
@@ -126,4 +532,25 @@ footer {
 
 a {
     text-decoration: none;
+}
+
+@media (max-width: 390px) {
+    .social-link img {
+        width: 120px;
+    }
+
+    .social-link {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .svg-icon {
+        margin-top: var(--gap-medium); /* Optional: Adjust spacing */
+    }
+
+    .personal-info {
+        flex-direction: column;
+        align-items: start;
+        padding-top: 0px;
+    }
 }
