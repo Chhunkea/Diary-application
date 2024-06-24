@@ -19,9 +19,9 @@ class headerElement extends HTMLElement {
                             </p>
                             <p>Welcome to your diary 🥰</p>
                         </div>
-                        <h1 class="diary-center">My Diary 🫶🏻!</h1>
+      
                         <div class="profile-pic">
-                            <img src="/asset/image-homepage/profile-picture.jpeg" alt="profile picture">
+                            <img src="/asset/image-homepage/profile-pic.jpeg" alt="profile picture">
                         </div>
                     </div>
                 </div>
