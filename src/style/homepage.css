@@ -30,6 +30,16 @@
     --gap-large: 30px;
 }
 
+#full-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#body-content {
+    flex-grow: 1;
+}
+
 /* Header */
 body, header {
     margin: 0;
@@ -114,30 +124,23 @@ html, body {
 }
 
 body {
-    display: grid;
-    grid-template-rows: auto 1fr auto;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('/asset/image-homepage/Desktop-background-homepage.jpg');
+    background-size: cover;
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    font-family: var(--font-family); /* Assuming you have a font-family defined */
+    color: var(--text-color); /* Assuming you have a text color variable */
 }
+
 
 .container {
     display: flex;
     flex-direction: column;
     gap: var(--gap-medium);
-    align-items: center; /* Center items horizontally */
-    position: relative; /* Make container relative for absolute positioning */
-}
-
-.image-container {
-    flex: 1;
-    width: 100%; /* Ensure full width */
-    display: flex;
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-}
-
-.image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    align-items: center; 
 }
 
 .hero {
@@ -145,10 +148,11 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: absolute; /* Keep clock absolutely positioned */
+    position: relative;
+    padding-top: 10px;
     top: 20%; /* Adjust as needed */
-    left: 50%; /* Adjust as needed */
-    transform: translate(-50%, -20%);
+/* Adjust as needed */
+    
     color: #fff;
     font-family: var(--font-family);
     z-index: 2; 
@@ -416,14 +420,25 @@ svg path {
 }
 
 /* CRUD: create, read, update, delete  */
+.border-box-diary {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    transition: 0.3s;
+}
+
 .outer-box {
     width: 400px;
     padding: 20px;
     margin: 20px;
     background-color: #3ABEF9;
     border-radius: 16px;
-    position: relative; /* Use relative positioning for SCRUD box */
-    z-index: -1;
+}
+
+@media (max-width: 390px) {
+    .outer-box {
+        width: 250px;
+    }
 }
 
 .crud {
@@ -494,6 +509,7 @@ footer {
     font-family: var(--font-family);
     font-size: var(--footer-font-size);
     color: var(--text-color);
+    margin-top: auto; /* Push footer to bottom */
 }
 
 .svg-icon {
