@@ -19,3 +19,26 @@ class TimeElement extends HTMLElement {
 }
 
 customElements.define('time-text', TimeElement);
+
+// Clock
+document.addEventListener('DOMContentLoaded', function() {
+    let hrsElement = document.getElementById("hrs");
+    let mintsElement = document.getElementById("mints");
+    let secElement = document.getElementById("sec");
+
+    function updateTime() {
+        let date = new Date();
+        let hrs = date.getHours();
+        let mints = date.getMinutes();
+        let sec = date.getSeconds();
+
+        hrsElement.textContent = hrs < 10 ? "0" + hrs : hrs;
+        mintsElement.textContent = mints < 10 ? "0" + mints : mints;
+        secElement.textContent = sec < 10 ? "0" + sec : sec;
+    }
+
+    updateTime();
+    setInterval(updateTime);
+});
+
+// CRUD
