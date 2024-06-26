@@ -244,8 +244,8 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column; 
-    z-index: 2;
-    margin-top: var(--gap-medium); /* Space between clock and CRUD */
+    z-index: 1;
+    margin-top: var(--gap-medium); 
 }
 
 .diary-text {
@@ -255,8 +255,6 @@ body {
 }
 
 .big-box {
-    width: 450px;
-    height: 200px;
     background-color: #A7E6FF;
     border-radius: 20px;
     display: flex;
@@ -269,54 +267,19 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: black;
+    color: var(--modal-black-color);
 }
 
 .inner-box h2 {
     text-decoration: underline;
 }
 
-.add-task {
-    margin-top: 10px;
-    text-align: center;
-    width: 280px;
-    background-color: #3ABEF9;
-    border-radius: 50px;
-}
-
-.add-task h2 {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgb(255, 246, 246);
-    font-size: var(--font-size-medium);
-}
-
-.add-task svg {
-    margin-left: 10px;
-    color: white;
-}
-
-svg path {
-    fill: rgb(255, 255, 255);
-}
-
 @media (max-width: 1024px) {
     .diary-button {
         top: 30%;
     }
-    .big-box {
-        width: 250px;
-        height: 160px;
-    }
+
     .inner-box h2 {
-        font-size: 18px;
-    }
-    .add-task {
-        width: 220px;
-    }
-    .add-task h2 {
         font-size: 18px;
     }
 }
@@ -332,22 +295,14 @@ svg path {
     .inner-box h2 {
         font-size: 20px;
     }
-    .add-task {
-        margin-top: 0;
-        width: 150px;
-    }
-    .add-task h2 {
-        font-size: 14px;
-    }
     .diary-text {
         font-size: var(--font-size-small);
     }
 }
 
-
 .big-box {
-    width: 450px;
-    height: 200px;
+    width: 300px;
+    height: 150px;
     background-color: #A7E6FF;
     border-radius: 20px;
     display: flex;
@@ -355,268 +310,265 @@ svg path {
     align-items: center;
 }
 
-.inner-box {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: black;
-}
-
-.inner-box h2 {
-    text-decoration: underline;
-}
-
-.add-task {
-    margin-top: 10px;
-    text-align: center;
-    width: 280px;
-    background-color: #3ABEF9;
-    border-radius: 50px;
-}
-
-.add-task h2 {
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: rgb(255, 246, 246);
-    font-size: var(--font-size-medium);
-}
-
-.add-task svg {
-    margin-left: 10px;
-}
 
 
 @media (max-width: 1024px) {
-    .diary-button {
-        top: 30%;
-    }
     .big-box {
         width: 250px;
-        height: 160px;
-    }
-    .inner-box h2 {
-        font-size: 18px;
-    }
-    .add-task {
-        width: 220px;
-    }
-    .add-task h2 {
-        font-size: 18px;
+        height: 100px;
     }
 }
 
 @media (max-width: 390px) {
-    .diary-button {
-        top: 32%;
-    }
     .big-box {
+        margin-top: 20px;
         width: 100px;
        background-color: transparent;
     }
-    .inner-box h2 {
-        font-size: 20px;
-    }
-    .add-task {
-        margin-top: 0;
-        width: 150px;
-    }
-    .add-task h2 {
-        font-size: 14px;
-    }
-    .diary-text {
-        font-size: var(--font-size-small);
-    }
 }
 
-/* CRUD: create, read, update, delete  */
-.border-box-diary {
+/* Crud box */
+.custom-div {
+    margin-top: 50px;
+    color: var(--modal-black-color);
+    width: 100%;
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
-    transition: 0.3s;
-}
-
-.outer-box {
-    width: 400px;
-    padding: 20px;
+    font-family: var(--font-family);
+  }
+  
+  .custom-div button {
+    cursor: pointer;
+  }
+  
+  .custom-div .crud {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     margin: 20px;
-    background-color: #3ABEF9;
-    border-radius: 16px;
-    border: black solid 2px;
-}
-
-@media (max-width: 390px) {
-    .outer-box {
-        width: 250px;
-    }
-}
-
-.crud {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #3ABEF9;
-    border-radius: 16px;
-}
-
-.outside-box {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-.input-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px; 
-}
-
-.edit-svg {
-    display: flex;
-    gap: 10px;
-}
-
-.input-with-icon {
+    border-radius: 10px;
+    background: var(--modal-footer-background-color);
+    overflow: hidden;
+  }
+  
+  .custom-div .diary-task {
+    min-height: 70px;
     display: flex;
     align-items: center;
-    gap: 10px;
     justify-content: space-between;
-}
-
-.input-with-icon textarea {
-    flex: 1; /* Allow the textarea to expand to fill available space */
-}
-
-.input-with-icon > input[type="text"],
-.input-with-icon > textarea,
-.input-container > div > input[type="text"] {
-    padding: 10px;
-    border-radius: 16px;
-    border: 1px solid #ccc; /* Example border style */
-    box-sizing: border-box;
-    justify-content: space-between;
-}
-
-#text-area {
-    width: 100%; /* Use full width available */
-    height: 120px;
-    border-radius: 8px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
-
-svg {
-    fill: black;
-    width: 24px; /* Adjust SVG size as needed */
-    height: 24px;
-}
-
-/* Pop up */
-
-/* Centering the modal */
-.pop-up {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-/* Style for modal dialog */
-.modal-dialog {
-    max-width: 500px; 
-    width: 100%; 
-}
+    padding: 12px;
+  }
   
-/* Style for modal content */
-.modal-content {
-    background-color: var(--modal-background-color);
-    border: 1px solid var(--modal-border-color);
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    font-family: var(--font-family);
-}
-
-/* Style for modal header */
-.modal-header {
-    background-color: var(--modal-header-background-color);
-    padding: 20px;
-    border-bottom: 1px solid var(--modal-border-color);
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
+  .custom-div .diary-task span {
+    font-weight: 900;
+    font-size: 20px;
+    word-break: break-all;
+  }
   
-/* Style for modal title */
-.modal-title {
-    color: var(--modal-black-color);
-    font-size: 16px;
-    margin: 0;
-    font-family: var(--font-family);
-}
+  .custom-div #btn-add {
+    font-size: 20px;
+    font-weight: 500;
+    width: 30px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: var(--modal-footer-button-primary-hover-border);
+  }
   
-/* Style for modal body */
-.modal-body {
-    padding: 20px;
-}
+  .custom-div #btn-add:hover {
+    background-color:var(--modal-black-color);
+  }
   
-/* Style for modal footer */
-.modal-footer {
-    background-color: var(--modal-footer-background-color);
-    padding: 20px;
-    border-top: 1px solid var(--modal-border-color);
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    display: flex;
-    justify-content: end; 
-}
-  
-/* Additional styles for inputs and buttons inside modal */
-.modal-body p {
-    color: var(--modal-black-color);
-    margin-bottom: 5px;
-    font-family: var(--font-family);
-}
-
-.modal-body input[type="text"],
-.modal-body input[type="date"],
-.modal-body textarea {
+  .table {
     width: 100%;
+    border-spacing: 10px;
+    word-break: break-all;
+    border-collapse: collapse;
+  }
+
+  .custom-div .table-container {
     padding: 10px;
-    border: 1px solid var(--modal-border-color);
-    border-radius: 4px;
-    box-sizing: border-box;
-    font-family: var(--font-family);
-}
+    height: calc(100% - 70px);
+    overflow-y: auto;
+  }
   
-.modal-footer button {
-    padding: 8px 15px;
-    margin-left: 10px;
-    font-family: var(--font-family);
-}
+  .custom-div table {
+    width: 100%;
+    word-break: break-all;
+    border-collapse: collapse;
+  }
   
-.modal-footer .btn-secondary {
-    border-radius: 4px;
-    background-color: var(--modal-footer-button-secondary-background);
-    color: var(--modal-footer-button-secondary-text);
-    border: 1px solid var(--modal-border-color);
-    font-family: var(--font-family);
-    color: black;
-}
-  
-.modal-footer .btn-primary {
-    background-color: var(--modal-footer-button-primary-background);
-    color: var(--modal-footer-button-primary-text);
-    border-radius: 4px;
-    border: var(--modal-footer-button-primary-background);
-    font-family: var(--font-family);
-}
-  
-.modal-footer .btn-primary:hover {
+  .custom-div thead {
     background-color: var(--modal-footer-button-primary-hover-background);
-    border-color: var(--modal-footer-button-primary-hover-border);
-}
+    color: white;
+  }
+  
+  .custom-div tr {
+    border-bottom: 1px solid var(--modal-footer-button-secondary-background) !important;
+  }
+  
+  .custom-div tbody tr td {
+    padding: 20px;
+  }
+  
+  .custom-div thead tr th {
+    padding: 20px;
+    text-align: center;
+  }
+
+  #date-th {
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    overflow: hidden; 
+  }
+  
+  #delete-th {
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .custom-div tbody tr {
+    text-align: center;
+  }
+  
+  .custom-div thead tr th.action {
+    width: 100px;
+    text-align: center;
+  }
+  
+  .custom-div tbody tr td.action {
+    text-align: center;
+  }
+  
+  /* Modal inside the box */
+  .custom-div .modal-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--clock-background);
+    display: none;
+    z-index: 99;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .custom-div .modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    background-color: var(--modal-footer-button-primary-text);
+    border-radius: 10px;
+    width: 50%;
+  }
+  
+  .custom-div .modal label {
+    font-size: 15px;
+    width: 100%;
+  }
+  
+  .custom-div .modal input {
+    width: 100%;
+    outline: none;
+    padding-top: 10px;
+    margin-bottom: 20px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  
+  .custom-div .modal button {
+    width: 100%;
+    margin: 10px auto;
+    outline: none;
+    border-radius: 16px;
+    padding: 5px 10px;
+    border: none;
+    background-color: var(--modal-footer-button-primary-hover-background);
+    color: white;
+  }
+  
+  .custom-div .modal button:hover {
+    background-color: var(--modal-black-color);
+  }
+  
+  .custom-div .active {
+    display: flex;
+  }
+  
+  .custom-div .active .modal {
+    animation: modal .4s;
+  }
+  
+  /* Edit and delete button */
+  .custom-div td button {
+    border: none;
+    outline: none;
+    background: transparent;
+  }
+  
+  .custom-div td button i {
+    font-size: 24px;
+  }
+  
+  .custom-div td button i:first-child {
+    margin-right: 10px;
+  }
+
+
+  /* Responsive adjustments for text size and overflow */
+@media (max-width: 1024px) {
+    .custom-div .diary-task span {
+      font-size: 20px;
+    }
+  
+    .custom-div tbody tr td, .custom-div thead tr th {
+      font-size: 16px;
+    }
+    
+    .custom-div .modal label, .custom-div .modal input {
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 390px) {
+    .custom-div .diary-task span {
+      font-size: 16px;
+    }
+  
+    .custom-div tbody tr td, .custom-div thead tr th {
+      font-size: 12px;
+    }
+    
+    .custom-div .modal label, .custom-div .modal input {
+      font-size: 12px;
+    }
+  
+    .custom-div .modal button {
+      font-size: 12px;
+    }
+  }
+  
+  /* Enable horizontal overflow for text */
+  .custom-div .diary-task span, 
+  .custom-div tbody tr td, 
+  .custom-div thead tr th {
+    white-space: nowrap;
+    word-break: break-all;
+    border-collapse: collapse;
+  }
+  
+  .custom-div tbody tr td.description {
+    word-wrap: break-word;
+    overflow-wrap: break-word; 
+    word-break: break-word; 
+    white-space: normal; 
+  }
+  
 
 /* Footer */
 footer {
@@ -686,3 +638,4 @@ a {
         padding-top: 0px;
     }
 }
+
