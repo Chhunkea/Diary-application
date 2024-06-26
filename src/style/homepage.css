@@ -28,6 +28,17 @@
     --gap-small: 10px;
     --gap-medium: 20px;
     --gap-large: 30px;
+    
+     /* Additional colors */
+     --modal-black-color: #0c0c0c;
+     --modal-background-color: #3ABEF9;
+     --modal-header-background-color: #A7E6FF;
+     --modal-footer-background-color: #A7E6FF;
+     --modal-footer-button-primary-background: #4E8FE7;
+     --modal-footer-button-primary-text: #fff;
+     --modal-footer-button-primary-hover-background: #0056b3;
+     --modal-footer-button-primary-hover-border: #0056b3;
+     --modal-footer-button-secondary-background: #FFFFFF;
 }
 
 #full-content {
@@ -130,11 +141,13 @@ body {
     background-image: url('/asset/image-homepage/Desktop-background-homepage.jpg');
     background-size: cover;
     background-position: center;
-    /* background-repeat: no-repeat; */
-    font-family: var(--font-family); /* Assuming you have a font-family defined */
-    color: var(--text-color); /* Assuming you have a text color variable */
+    font-family: var(--font-family); 
+    color: var(--text-color);
 }
 
+.edit-icon {
+    cursor: pointer;
+}
 
 .container {
     display: flex;
@@ -150,8 +163,7 @@ body {
     align-items: center;
     position: relative;
     padding-top: 10px;
-    top: 20%; /* Adjust as needed */
-/* Adjust as needed */
+    top: 20%; 
     
     color: #fff;
     font-family: var(--font-family);
@@ -433,6 +445,7 @@ svg path {
     margin: 20px;
     background-color: #3ABEF9;
     border-radius: 16px;
+    border: black solid 2px;
 }
 
 @media (max-width: 390px) {
@@ -457,7 +470,7 @@ svg path {
 .input-container {
     display: flex;
     flex-direction: column;
-    gap: 10px; /* Space between individual inputs */
+    gap: 10px; 
 }
 
 .edit-svg {
@@ -501,6 +514,109 @@ svg {
     height: 24px;
 }
 
+/* Pop up */
+
+/* Centering the modal */
+.pop-up {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Style for modal dialog */
+.modal-dialog {
+    max-width: 500px; 
+    width: 100%; 
+}
+  
+/* Style for modal content */
+.modal-content {
+    background-color: var(--modal-background-color);
+    border: 1px solid var(--modal-border-color);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-family: var(--font-family);
+}
+
+/* Style for modal header */
+.modal-header {
+    background-color: var(--modal-header-background-color);
+    padding: 20px;
+    border-bottom: 1px solid var(--modal-border-color);
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+  
+/* Style for modal title */
+.modal-title {
+    color: var(--modal-black-color);
+    font-size: 16px;
+    margin: 0;
+    font-family: var(--font-family);
+}
+  
+/* Style for modal body */
+.modal-body {
+    padding: 20px;
+}
+  
+/* Style for modal footer */
+.modal-footer {
+    background-color: var(--modal-footer-background-color);
+    padding: 20px;
+    border-top: 1px solid var(--modal-border-color);
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    display: flex;
+    justify-content: end; 
+}
+  
+/* Additional styles for inputs and buttons inside modal */
+.modal-body p {
+    color: var(--modal-black-color);
+    margin-bottom: 5px;
+    font-family: var(--font-family);
+}
+
+.modal-body input[type="text"],
+.modal-body input[type="date"],
+.modal-body textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--modal-border-color);
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+  
+.modal-footer button {
+    padding: 8px 15px;
+    margin-left: 10px;
+    font-family: var(--font-family);
+}
+  
+.modal-footer .btn-secondary {
+    border-radius: 4px;
+    background-color: var(--modal-footer-button-secondary-background);
+    color: var(--modal-footer-button-secondary-text);
+    border: 1px solid var(--modal-border-color);
+    font-family: var(--font-family);
+    color: black;
+}
+  
+.modal-footer .btn-primary {
+    background-color: var(--modal-footer-button-primary-background);
+    color: var(--modal-footer-button-primary-text);
+    border-radius: 4px;
+    border: var(--modal-footer-button-primary-background);
+    font-family: var(--font-family);
+}
+  
+.modal-footer .btn-primary:hover {
+    background-color: var(--modal-footer-button-primary-hover-background);
+    border-color: var(--modal-footer-button-primary-hover-border);
+}
 
 /* Footer */
 footer {
