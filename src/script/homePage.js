@@ -9,6 +9,7 @@ class TimeElement extends HTMLElement {
         let hour = now.getHours();
         let greeting = '';
         
+        // Determine the appropriate greeting based on the current hour
         if (hour < 12) greeting = "Good morning!"; 
         else if (hour >= 12 && hour < 18)greeting = "Good afternoon!";
         else if (hour >= 18 && hour < 21) greeting = "Good evening!";
@@ -17,7 +18,7 @@ class TimeElement extends HTMLElement {
         this.innerHTML = `<span>${greeting}</span>`;
     }
 }
-
+// Define a custom element 'time-text' to use in html folder
 customElements.define('time-text', TimeElement);
 
 // Clock
@@ -26,12 +27,14 @@ document.addEventListener('DOMContentLoaded', function() {
     let mintsElement = document.getElementById("mints");
     let secElement = document.getElementById("sec");
 
+    // Function to update time display
     function updateTime() {
         let date = new Date();
         let hrs = date.getHours();
         let mints = date.getMinutes();
         let sec = date.getSeconds();
 
+        // Display hours, minutes, and seconds with leading zeros if less than 10
         hrsElement.textContent = hrs < 10 ? "0" + hrs : hrs;
         mintsElement.textContent = mints < 10 ? "0" + mints : mints;
         secElement.textContent = sec < 10 ? "0" + sec : sec;
@@ -41,72 +44,139 @@ document.addEventListener('DOMContentLoaded', function() {
     setInterval(updateTime);
 });
 
-// CRUD: Add crud
-document.addEventListener("DOMContentLoaded", function() {
-    const svgButton = document.querySelector('.add-button');
-    const targetSection = document.querySelector('.border-box-diary');
-    const savedContent = localStorage.getItem('savedContent');
-    
-    if (savedContent) {
-        targetSection.innerHTML = savedContent;
-    }
 
-    // Add click event listener to the SVG button
-    svgButton.addEventListener('click', function() {
-        const htmlToAdd = `
-            <section class="border-box-diary">
-                <div class="outer-box">
-                    <div class="crud">
-                        <div class="outside-box">
-                            <div class="input-container">
-                                <div class="input-with-icon">
-                                    <input type="text" id="inputText">
-                                    <div class="edit-svg">
-                                        <!-- Svg: edit svg -->
-                                        <svg class="edit-icon" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M4 40C2.9 40 1.95867 39.6091 1.176 38.8275C0.393333 38.0458 0.00133333 37.1049 0 36.005V8.03995C0 6.94132 0.392 6.00116 1.176 5.21947C1.96 4.43779 2.90133 4.04628 4 4.04494H21.85L17.85 8.03995H4V36.005H32V22.1223L36 18.1273V36.005C36 37.1036 35.6087 38.0444 34.826 38.8275C34.0433 39.6105 33.1013 40.0013 32 40H4ZM12 28.015V19.5256L30.35 1.1985C30.75 0.799001 31.2 0.499376 31.7 0.299625C32.2 0.0998751 32.7 0 33.2 0C33.7333 0 34.242 0.0998751 34.726 0.299625C35.21 0.499376 35.6513 0.799001 36.05 1.1985L38.85 4.04494C39.2167 4.44444 39.5 4.88589 39.7 5.36929C39.9 5.85268 40 6.3434 40 6.84145C40 7.33949 39.9087 7.83088 39.726 8.31561C39.5433 8.80033 39.2513 9.24111 38.85 9.63795L20.5 28.015H12ZM16 24.02H18.8L30.4 12.4345L29 11.0362L27.55 9.63795L16 21.1735V24.02Z" fill="black"/>
-                                        </svg>
-
-                                        <!-- Svg: delete svg -->
-                                        <svg onclick="deleteBox(this)" width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M30 2.22222L27.1429 0H12.8571L10 2.22222H0V6.66667H40V2.22222H30ZM2.85714 35.5556C2.85714 38 5.42857 40 8.57143 40H31.4286C34.5714 40 37.1429 38 37.1429 35.5556V8.88889H2.85714V35.5556ZM8.57143 13.3333H31.4286V35.5556H8.57143V13.3333Z" fill="black"/>
-                                        </svg>
-                                    </div>
-                                </div>
-                                <div class="second-input">
-                                    <input type="text">
-                                </div>
-                                <div>
-                                    <textarea id="text-area"></textarea>                  
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        `;
-
-        targetSection.insertAdjacentHTML('beforeend', htmlToAdd);
-        updateLocalStorage();
-    });
-
-    // CRUD: Save text input
-
-    
-
-    // CRUD: Delete
-    window.deleteBox = function(button) {
-        const box = button.closest('.border-box-diary');
-        if (box) {
-            box.remove();
-            updateLocalStorage();
+// Crud Function
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.querySelector('.modal-container');
+    const tbody = document.querySelector('tbody');
+    const mDate = document.querySelector('#m-date');
+    const mFeeling = document.querySelector('#m-feeling');
+    const mDescription = document.querySelector('#m-description');
+    const btnSave = document.querySelector('#btnSave');
+    const btnAdd = document.querySelector('#btn-add');
+  
+    // Array to hold diary items
+    // Variable to track the index of the item being edited
+    let items;
+    let id;
+  
+    // Function to open modal for adding or editing items
+    function openModal(edit = false, index = 0) {
+      modal.classList.add('active');
+  
+      //  modal close on click outside modal content
+      modal.onclick = e => {
+        if (e.target.classmDate.indexOf('modal-container') !== -1) {
+          modal.classList.remove('active');
         }
-    };
-
-    function updateLocalStorage() {
-        localStorage.setItem('savedContent', targetSection.innerHTML);
+      };
+  
+      // modal file for editing 
+      // else clear modal fields for adding new item
+      if (edit) {
+        mDate.value = items[index].date;
+        mFeeling.value = items[index].feeling;
+        mDescription.value = items[index].description;
+        id = index;
+      } else {
+        mDate.value = '';
+        mFeeling.value = '';
+        mDescription.value = '';
+      }
     }
-});
+  
+    // Function to initiate editing of an item
+    function editItem(index) {
+      openModal(true, index);
+    }
+  
+    // Function to delete an item
+    function deleteItem(index) {
+      items.splice(index, 1);
+      setItemsInLocalStorage();
+      loadItems();
+    }
+  
+    // Function to insert an item into the table
+    function insertItem(item, index) {
+      let tr = document.createElement('tr');
+  
+      tr.innerHTML = `
+        <td>${item.date}</td>
+        <td>${item.feeling}</td>
+        <td class = 'description'>$ ${item.description}</td>
+        <td class="action">
+          <button class="edit-btn" data-index="${index}"><i class='bx bx-edit'></i></button>
+        </td>
+        <td class="action">
+          <button class="delete-btn" data-index="${index}"><i class='bx bx-trash'></i></button>
+        </td>
+      `;
+      tbody.appendChild(tr);
+    }
+  
+    // Handler for save button
+    btnSave.onclick = e => {
+      // Ensure all fields are filled before proceeding
+      if (mDate.value === '' || mFeeling.value === '' || mDescription.value === '') {
+        return;
+      }
+  
+      e.preventDefault();
+  
+      // Update or add item based on whether id is defined
+      if (id !== undefined) {
+        items[id].date = mDate.value;
+        items[id].feeling = mFeeling.value;
+        items[id].description = mDescription.value;
+      } else {
+        items.push({ 'date': mDate.value, 'feeling': mFeeling.value, 'description': mDescription.value });
+      }
+  
+      // Update local storage
+      // Close modal
+      // Reload items in the table
+      // Reset id after saving
+      setItemsInLocalStorage();   
+      modal.classList.remove('active'); 
+      loadItems();
+      id = undefined;
+    };
+  
+    // Function to load items from local storage into the table
+    function loadItems() {
+      items = getItemsFromLocalStorage();
+      tbody.innerHTML = '';
+      items.forEach((item, index) => {
+        // Insert each item into the table
+        insertItem(item, index);
+      });
 
-// Remove item from local storage
-// localStorage.removeItem('savedContent');
+      // Event listeners for edit and delete buttons
+      document.querySelectorAll('.edit-btn').forEach(button => {
+        button.onclick = () => {
+          editItem(button.getAttribute('data-index'));
+        };
+      });
+
+      // Handle delete button click
+      document.querySelectorAll('.delete-btn').forEach(button => {
+        button.onclick = () => {
+          deleteItem(button.getAttribute('data-index'));
+        };
+      });
+    }
+  
+    // Function that get items from local storage
+    const getItemsFromLocalStorage = () => JSON.parse(localStorage.getItem('diaryElement')) ?? [];
+
+    // Function to store items in local storage
+    const setItemsInLocalStorage = () => localStorage.setItem('diaryElement', JSON.stringify(items));
+  
+    // Add event listener to the add button
+    btnAdd.addEventListener('click', () => openModal());
+  
+    // Initial load of items
+    loadItems();
+  });
+  
