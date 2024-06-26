@@ -6,10 +6,11 @@
     <title>Homepage</title>
     <link rel="stylesheet" href="/src/style/homepage.css">
     <script src="/src/script/homePage.js" defer></script>
-    <script src="/components/header.js"></script>
-    <script src="/components/footer.js"></script>
-    <script src="/components/crudBox.js"></script>
-    <script src="/components/clock.js"></script>
+    <script src="/components/header.js" defer></script>
+    <script src="/components/footer.js" defer></script>
+    <script src="/components/clock.js" defer></script>
+    <script src="/components/crud.js"></script>
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     
@@ -17,44 +18,14 @@
         <!-- Header: homepage header -->
         <header-item></header-item>
         
-        <div id="body-content">
-            <!-- Section: clock and diary app -->
-             <clock-digital></clock-digital>
+        <!-- Section: clock section -->
+        <clock-digital></clock-digital>
 
-            <!-- CRUD: create, read, update, delete -->
-            <crud-box></crud-box>
-        </div>
+        <!-- Section: crud section -->
+        <crud-box></crud-box>
+    </div>
 
-        <!-- Edit: Popup box -->
-        <!-- <div class="pop-up">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Add New Task</h5>
-                    </div>
-        
-                    <div class="modal-body">
-                        <p>Task Title</p>
-                        <input type="text" class="form-control" name="" id="textInput">
-                        <div id="msg"></div>
-                        <br>
-                        <p>Due Date</p>
-                        <input type="date" class="form-control" name="" id="dateInput">
-                        <br>
-                        <p>Description</p>
-                        <textarea name="" class="form-control" id="textarea" cols="30" rows="5"></textarea>
-                    </div>
-                    
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="submit" id="add" class="btn btn-primary" data-bs-dismiss="">Add</button>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-        <!-- Footer -->
-        <footer-element></footer-element>   
-    </div> 
+    <!-- Footer -->
+    <footer-element></footer-element>   
 </body>
 </html>
