@@ -8,149 +8,53 @@
     <script src="/src/script/homePage.js" defer></script>
     <script src="/components/header.js"></script>
     <script src="/components/footer.js"></script>
+    <script src="/components/crudBox.js"></script>
+    <script src="/components/clock.js"></script>
 </head>
 <body>
     
     <div id="full-content">
-           <!-- Header: homepage header -->
-    <header-item></header-item>
-
-    <div id="body-content">
-    <!-- Section: body section -->
-    <div class="container">
-        <section class="image-container">
-            <!-- Clock and CRUD container -->
-            <div class="hero">
-                <!-- Clock -->
-                <div class="clock">
-                    <span id="hrs">00</span>
-                    <span>:</span>
-                    <span id="mints">00</span>
-                    <span>:</span>
-                    <span id="sec">00</span>
-                </div>
-
-
-                <!--  Diary: diary add new task -->
-                <div class="diary-button">
-                    <div class="diary-text">
-                        <div class="big-box">
-                            <div class="inner-box">
-                                <h2>Diary App</h2>
-                                <div class="add-task">
-                                    <h2>ADD NEW TASK 
-                                        <svg class="add-button" width="24" height="24" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M20 0C8.95437 0 0 8.95437 0 20C0 31.0462 8.95437 40 20 40C31.0462 40 40 31.0462 40 20C40 8.95437 31.0462 0 20 0ZM20 37.5394C10.3506 37.5394 2.5 29.6494 2.5 19.9999C2.5 10.3505 10.3506 2.49992 20 2.49992C29.6494 2.49992 37.5 10.3506 37.5 19.9999C37.5 29.6493 29.6494 37.5394 20 37.5394ZM28.75 18.75H21.25V11.25C21.25 10.56 20.69 10 20 10C19.31 10 18.75 10.56 18.75 11.25V18.75H11.25C10.56 18.75 10 19.31 10 20C10 20.69 10.56 21.25 11.25 21.25H18.75V28.75C18.75 29.44 19.31 30 20 30C20.69 30 21.25 29.44 21.25 28.75V21.25H28.75C29.44 21.25 30 20.69 30 20C30 19.31 29.44 18.75 28.75 18.75Z" fill="white"/>
-                                        </svg>                                         
-                                    </h2>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-     <!-- CRUD: create, read, update, delete -->
-     <section class="border-box-diary">
-        <div class="outer-box">
-            <div class="crud">
-                <div class="outside-box">
-                    <div class="input-container">
-                        <div class="input-with-icon">
-                            <input type="text">
-                            <div class="edit-svg">
-                                <!-- Svg: edit svg -->
-                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 40C2.9 40 1.95867 39.6091 1.176 38.8275C0.393333 38.0458 0.00133333 37.1049 0 36.005V8.03995C0 6.94132 0.392 6.00116 1.176 5.21947C1.96 4.43779 2.90133 4.04628 4 4.04494H21.85L17.85 8.03995H4V36.005H32V22.1223L36 18.1273V36.005C36 37.1036 35.6087 38.0444 34.826 38.8275C34.0433 39.6105 33.1013 40.0013 32 40H4ZM12 28.015V19.5256L30.35 1.1985C30.75 0.799001 31.2 0.499376 31.7 0.299625C32.2 0.0998751 32.7 0 33.2 0C33.7333 0 34.242 0.0998751 34.726 0.299625C35.21 0.499376 35.6513 0.799001 36.05 1.1985L38.85 4.04494C39.2167 4.44444 39.5 4.88589 39.7 5.36929C39.9 5.85268 40 6.3434 40 6.84145C40 7.33949 39.9087 7.83088 39.726 8.31561C39.5433 8.80033 39.2513 9.24111 38.85 9.63795L20.5 28.015H12ZM16 24.02H18.8L30.4 12.4345L29 11.0362L27.55 9.63795L16 21.1735V24.02Z" fill="black"/>
-                                </svg>
-
-                                <!-- Svg: delete svg -->
-                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M30 2.22222L27.1429 0H12.8571L10 2.22222H0V6.66667H40V2.22222H30ZM2.85714 35.5556C2.85714 38 5.42857 40 8.57143 40H31.4286C34.5714 40 37.1429 38 37.1429 35.5556V8.88889H2.85714V35.5556ZM8.57143 13.3333H31.4286V35.5556H8.57143V13.3333Z" fill="black"/>
-                                </svg>  
-                            </div>
-                
-                        </div>
-                        <div class="second-input">
-                            <input type="text">
-                        </div>
-                        <div>
-                            <textarea name="" id="text-area"></textarea>                  
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- Header: homepage header -->
+        <header-item></header-item>
         
-        <!-- Another outer-box -->
-        <div class="outer-box">
-            <div class="crud">
-                <div class="outside-box">
-                    <div class="input-container">
-                        <div class="input-with-icon">
-                            <input type="text">
-                            <div class="edit-svg">
-                                <!-- Svg: edit svg -->
-                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 40C2.9 40 1.95867 39.6091 1.176 38.8275C0.393333 38.0458 0.00133333 37.1049 0 36.005V8.03995C0 6.94132 0.392 6.00116 1.176 5.21947C1.96 4.43779 2.90133 4.04628 4 4.04494H21.85L17.85 8.03995H4V36.005H32V22.1223L36 18.1273V36.005C36 37.1036 35.6087 38.0444 34.826 38.8275C34.0433 39.6105 33.1013 40.0013 32 40H4ZM12 28.015V19.5256L30.35 1.1985C30.75 0.799001 31.2 0.499376 31.7 0.299625C32.2 0.0998751 32.7 0 33.2 0C33.7333 0 34.242 0.0998751 34.726 0.299625C35.21 0.499376 35.6513 0.799001 36.05 1.1985L38.85 4.04494C39.2167 4.44444 39.5 4.88589 39.7 5.36929C39.9 5.85268 40 6.3434 40 6.84145C40 7.33949 39.9087 7.83088 39.726 8.31561C39.5433 8.80033 39.2513 9.24111 38.85 9.63795L20.5 28.015H12ZM16 24.02H18.8L30.4 12.4345L29 11.0362L27.55 9.63795L16 21.1735V24.02Z" fill="black"/>
-                                </svg>
+        <div id="body-content">
+            <!-- Section: clock and diary app -->
+             <clock-digital></clock-digital>
 
-                                <!-- Svg: delete svg -->
-                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M30 2.22222L27.1429 0H12.8571L10 2.22222H0V6.66667H40V2.22222H30ZM2.85714 35.5556C2.85714 38 5.42857 40 8.57143 40H31.4286C34.5714 40 37.1429 38 37.1429 35.5556V8.88889H2.85714V35.5556ZM8.57143 13.3333H31.4286V35.5556H8.57143V13.3333Z" fill="black"/>
-                                </svg>  
-                            </div>
-                        </div>
-                        <div class="second-input">
-                            <input type="text">
-                        </div>
-                        <div>
-                            <textarea name="" id="text-area"></textarea>                  
-                        </div>
+            <!-- CRUD: create, read, update, delete -->
+            <crud-box></crud-box>
+        </div>
+
+        <!-- Edit: Popup box -->
+        <!-- <div class="pop-up">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Add New Task</h5>
+                    </div>
+        
+                    <div class="modal-body">
+                        <p>Task Title</p>
+                        <input type="text" class="form-control" name="" id="textInput">
+                        <div id="msg"></div>
+                        <br>
+                        <p>Due Date</p>
+                        <input type="date" class="form-control" name="" id="dateInput">
+                        <br>
+                        <p>Description</p>
+                        <textarea name="" class="form-control" id="textarea" cols="30" rows="5"></textarea>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="submit" id="add" class="btn btn-primary" data-bs-dismiss="">Add</button>
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
-         <!-- Another outer-box -->
-         <div class="outer-box">
-            <div class="crud">
-                <div class="outside-box">
-                    <div class="input-container">
-                        <div class="input-with-icon">
-                            <input type="text">
-                            <div class="edit-svg">
-                                <!-- Svg: edit svg -->
-                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 40C2.9 40 1.95867 39.6091 1.176 38.8275C0.393333 38.0458 0.00133333 37.1049 0 36.005V8.03995C0 6.94132 0.392 6.00116 1.176 5.21947C1.96 4.43779 2.90133 4.04628 4 4.04494H21.85L17.85 8.03995H4V36.005H32V22.1223L36 18.1273V36.005C36 37.1036 35.6087 38.0444 34.826 38.8275C34.0433 39.6105 33.1013 40.0013 32 40H4ZM12 28.015V19.5256L30.35 1.1985C30.75 0.799001 31.2 0.499376 31.7 0.299625C32.2 0.0998751 32.7 0 33.2 0C33.7333 0 34.242 0.0998751 34.726 0.299625C35.21 0.499376 35.6513 0.799001 36.05 1.1985L38.85 4.04494C39.2167 4.44444 39.5 4.88589 39.7 5.36929C39.9 5.85268 40 6.3434 40 6.84145C40 7.33949 39.9087 7.83088 39.726 8.31561C39.5433 8.80033 39.2513 9.24111 38.85 9.63795L20.5 28.015H12ZM16 24.02H18.8L30.4 12.4345L29 11.0362L27.55 9.63795L16 21.1735V24.02Z" fill="black"/>
-                                </svg>
-
-                                <!-- Svg: delete svg -->
-                                <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M30 2.22222L27.1429 0H12.8571L10 2.22222H0V6.66667H40V2.22222H30ZM2.85714 35.5556C2.85714 38 5.42857 40 8.57143 40H31.4286C34.5714 40 37.1429 38 37.1429 35.5556V8.88889H2.85714V35.5556ZM8.57143 13.3333H31.4286V35.5556H8.57143V13.3333Z" fill="black"/>
-                                </svg>  
-                            </div>
-                        </div>
-                        <div class="second-input">
-                            <input type="text">
-                        </div>
-                        <div>
-                            <textarea name="" id="text-area"></textarea>                  
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-     </section>
-    </div>
-   
-
-     <!-- Footer -->
-     <footer-element></footer-element>   
-    </div>
- 
-     
+        <!-- Footer -->
+        <footer-element></footer-element>   
+    </div> 
 </body>
 </html>
