@@ -5,7 +5,7 @@
  Design Prototype and re-develop a user-friendly and visually captivating clone of the Diary Web Application frontend platform, and ensures seamless compatibility across multiple devices and screen sizes.
 
 <div align="center">
-    <img src="/asset/readme-image/diary-book.png" alt="diary book" width="200" height="200">
+    <img src="/asset/readme-image/diary-book.png" alt="diary book" width="500" height="500">
 </div>
 
 
@@ -22,12 +22,11 @@
 - **`Figma`:** An innovative design tool used for creating user interfaces, prototypes, and collaborative design projects.
 
 # Communication tools :
-
-![r.webp](https://prod-files-secure.s3.us-west-2.amazonaws.com/d09f4b93-28fa-4ab8-bf9f-1e1f34adf896/ea79b02d-ab1e-49b1-9b60-f7265b0815e3/r.webp)
-
-![a.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d09f4b93-28fa-4ab8-bf9f-1e1f34adf896/fd21a7ad-0b7d-4298-b5b4-d10d8f98ef51/a.png)
-
-![Notion_app_logo.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d09f4b93-28fa-4ab8-bf9f-1e1f34adf896/cf126d6c-376d-47ea-b502-02183bbfacea/Notion_app_logo.png)
+<div align="center">
+  <img src="/asset/readme-image/review-board.webp" alt="review board" width="100" height="100">
+  <img src="/asset/readme-image/anb-logo.png" alt="anb Logo" width="100" height="100">
+  <img src="/asset/readme-image/notion-logo.png" alt="notion Logo" width="100" height="100">
+</div>
 
 - **`ANB community` : Maintain daily or weekly notes on tasks completed, tasks pending, and any obstacles. Use it as a self-scrum tool to keep your project on track.**
 - **`Peer Review Board` : invite feedback from mentors, friends, or online coding communities to enhance your code quality.**
@@ -72,7 +71,9 @@
 
 # Project structure :
 
-![Screenshot 2024-06-21 at 2.17.25 PM.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/d09f4b93-28fa-4ab8-bf9f-1e1f34adf896/c2da1dd7-aa9c-4986-aa1b-cfc8837a5e49/Screenshot_2024-06-21_at_2.17.25_PM.png)
+<div align="center">
+    <img src="/asset/readme-image/project-structure.png" alt="project structure" width="300" height="300">
+</div>
 
 ## **Description:**
 
@@ -216,8 +217,9 @@ Classes, function and variable naming.
 - **CSS Styling** : Do not write inline style or external styles that are not needed.
 
 # Version Control:
-
-![width_1600.webp](https://prod-files-secure.s3.us-west-2.amazonaws.com/d09f4b93-28fa-4ab8-bf9f-1e1f34adf896/9021f450-eaf5-4c94-818d-14778b808d23/width_1600.webp)
+<div align="center">
+    <img src="/asset/readme-image/git-flow.webp" alt="git flow" width="500" height="500">
+</div>
 
 ## Issue naming convention :
 
