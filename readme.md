@@ -23,8 +23,8 @@
 
 # Communication tools :
 <div align="center">
-  <img src="/asset/readme-image/review-board.webp" alt="review board" width="150" height="150">
   <img src="/asset/readme-image/anb-image.png" alt="anb Logo" width="150" height="150">
+  <img src="/asset/readme-image/review-board.webp" alt="review board" width="150" height="150">
   <img src="/asset/readme-image/notion-logo.png" alt="notion Logo" width="80" height="80">
 </div>
 
