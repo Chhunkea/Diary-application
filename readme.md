@@ -4,7 +4,9 @@
 
  ****Design Prototype and re-develop a user-friendly and visually captivating clone of the Diary Web Application frontend platform, and ensures seamless compatibility across multiple devices and screen sizes.
 
-[diary-doodle-vector-filled-outline-sticker-eps-10-file_357500-2688.avif](https://prod-files-secure.s3.us-west-2.amazonaws.com/d09f4b93-28fa-4ab8-bf9f-1e1f34adf896/4fe60900-169b-4916-b5a4-14524709c326/diary-doodle-vector-filled-outline-sticker-eps-10-file_357500-2688.avif)
+<div class="image-container">
+  <img src="/asset/readme-image/diary-book.avif" alt="diary image book" class="diary-image">
+</div>
 
 # Development Tools :
 

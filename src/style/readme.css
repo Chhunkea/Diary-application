@@ -1,0 +1,12 @@
+/* assets/css/styles.css */
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .diary-image {
+    max-width: 100%;
+    height: auto;
+  }
+  
