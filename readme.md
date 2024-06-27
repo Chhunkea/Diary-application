@@ -12,9 +12,9 @@
 # Development Tools :
 
 <div align="center">
-  <img src="/asset/readme-image/vscode-logo.webp" alt="VS Code Logo" width="100" height="100">
-  <img src="/asset/readme-image/gitlab-logo.webp" alt="GitLab Logo" width="150"   height="150">
-  <img src="/asset/readme-image/figma-logo.webp" alt="Figma Logo" width="100" height="100">
+  <img src="/asset/readme-image/vscode-logo.webp" alt="VS Code Logo" width="50" height="50">
+  <img src="/asset/readme-image/gitlab-logo.webp" alt="GitLab Logo" width="100"   height="100">
+  <img src="/asset/readme-image/figma-logo.webp" alt="Figma Logo" width="50" height="50">
 </div>
 
 - **`Visual Studio Code (VSCode)`:** A powerful and versatile code editor that provides an excellent development environment with features like syntax highlighting, debugging support, and extensions for enhanced productivity.
