@@ -3,28 +3,32 @@
 
 /* Define CSS variables */
 :root {
-    --profile-pic-size: 40px;
-    --svg-margin-right: 10px;
-    --greeting-padding-top: 10px;
-    --footer-font-size: 16px;
-    --footer-padding: 20px;
-    
-    /* border radius */
-    
-
-    /* Font size */
-    --font-size-small: 14px;
-    --font-size-medium: 20px;
-    --font-size-large: 36px;
+     /* Font family */
+    --font-family-montserrat: 'Montserrat', sans-serif;
+    --font-family-raleway: 'Raleway', sans-serif;
 
     /* Font weight */
     --font-weight-bold: bold;
     --font-weight-normal: normal;
-   
-    /* Font family */
-    --font-family-montserrat: 'Montserrat', sans-serif;
-    --font-family-raleway: 'Raleway', sans-serif;
 
+    /* border radius */
+    --profile-pic-size: 40px;
+    --border-radius-small: 5px;
+    --border-radius-medium: 10px;
+    --border-radius-huge: 16px;
+    --border-radius-large: 20px;
+    --border-radius-round: 50%;
+
+    /* Font size */
+    --font-size-smallest: 8px;
+    --font-size-smaller: 12px;
+    --font-size-default: 16px;
+    --font-size-huge: 18px;
+    --font-size-medium: 20px;
+    --font-size-svg: 24px;
+    --font-size-large: 36px;
+    --font-size-larger: 50px;
+  
     /* Gap */
     --gap-small: 10px;
     --gap-medium: 20px;
@@ -47,7 +51,6 @@
     --padding-larger: 50px;
 
     /* Clock sizing*/
-    --clock-border-radius: 10px;
     --clock-width-desktop: 400px;
     --clock-height-desktop: 100px;
     --clock-width-tablet: 300px;
@@ -70,6 +73,7 @@
      --clock-background: rgba(0, 0, 0, 0.319);
 }
 
+/* Body: full body content style */
 #full-content {
     height: 100%;
     display: flex;
@@ -82,14 +86,14 @@
 
 /* Header */
 body, header {
-    margin: 0;
-    padding: 0;
+    margin: var(--margin-default);
+    padding: var(--padding-default);
 }
 
 .header-background {
     background-color: var(--background-color);
-    padding: 20px;
-    margin: 0;
+    padding: var(--padding-medium);
+    margin: var(--margin-default);
 }
 
 .header-content {
@@ -104,19 +108,19 @@ body, header {
 .greeting {
     display: flex;
     flex-direction: column;
-    margin: 0;
+    margin: var(--margin-default);
     font-size: var(--font-size-medium);
 }
 
 .greeting p {
     display: flex;
     align-items: center;
-    margin: 0;
-    padding-top: var(--greeting-padding-top);
+    margin: var(--margin-default);
+    padding-top: var(--padding-small);
 }
 
 .greeting svg {
-    margin-right: var(--svg-margin-right);
+    margin-right: var(--margin-small);
 }
 
 .greeting-message {
@@ -125,7 +129,7 @@ body, header {
 
 .diary-center {
     font-size: var(--font-size-large);
-    margin-bottom: var(--gap-medium);
+    margin-bottom: var(--margin-medium);
     text-decoration: underline;
 }
 
@@ -133,8 +137,8 @@ body, header {
     width: var(--profile-pic-size);
     height: var(--profile-pic-size);
     overflow: hidden;
-    border-radius: 50%;
-    margin-bottom: var(--gap-small);
+    border-radius: var(--border-radius-round);
+    margin-bottom: var(--margin-small);
 }
 
 .profile-pic img {
@@ -158,14 +162,14 @@ body, header {
 
 /* Section: hero section */
 html, body {
-    margin: 0;
-    padding: 0;
+    margin: var(--margin-default);
+    padding: var(--padding-default);
     height: 100%;
 }
 
 body {
-    margin: 0;
-    padding: 0;
+    margin: var(--margin-default);
+    padding: var(--padding-default);
     height: 100vh;
     background-image: url('/asset/image-homepage/Desktop-background-homepage.jpg');
     background-size: cover;
@@ -191,7 +195,7 @@ body {
     justify-content: center;
     align-items: center;
     position: relative;
-    padding-top: 10px;
+    padding-top: var(--padding-small);
     top: 20%; 
     color: var(--white);
     font-family: var(--font-family-montserrat);
@@ -202,7 +206,7 @@ body {
     width: var(--clock-width-desktop); 
     height: var(--clock-height-desktop); 
     background: var(--clock-background);
-    border-radius: var(--clock-border-radius);
+    border-radius: var(--border-radius-medium);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -210,14 +214,14 @@ body {
 }
 
 .clock span {
-    font-size: 50px; 
+    font-size: var(--font-size-larger); 
     display: inline-block;
     text-align: center;
     position: relative;
 }
 
 .clock span::after {
-    font-size: 12px; 
+    font-size: var(--font-size-smaller); 
     position: absolute;
     bottom: -5px;
     left: 50%;
@@ -243,11 +247,11 @@ body {
     }
 
     .clock span {
-        font-size: 40px; 
+        font-size: var(--font-size-larger); 
     }
 
     .clock span::after {
-        font-size: 10px; 
+        font-size: var(--font-size-smaller); 
     }
 }
 
@@ -262,7 +266,7 @@ body {
     }
 
     .clock span::after {
-        font-size: 8px; 
+        font-size: var(--font-size-smallest); 
     }
 }
 
@@ -273,7 +277,7 @@ body {
     align-items: center;
     flex-direction: column; 
     z-index: 1;
-    margin-top: var(--gap-medium); 
+    margin-top: var(--margin-medium); 
 }
 
 .diary-text {
@@ -284,7 +288,7 @@ body {
 
 .big-box {
     background-color: var(--light-blue);
-    border-radius: 20px;
+    border-radius: var(--border-radius-large);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -308,20 +312,20 @@ body {
     }
 
     .inner-box h2 {
-        font-size: 18px;
+        font-size: var(--font-size-huge);
     }
 }
 
 @media (max-width: 390px) {
     .diary-button {
-        margin-top: -10%;
+        margin-top: var(--margin-negative);
     }
     .big-box {
         width: 100px;
         background-color: transparent;
     }
     .inner-box h2 {
-        font-size: 20px;
+        font-size: var(--font-size-medium);
     }
     .diary-text {
         font-size: var(--font-size-small);
@@ -332,7 +336,7 @@ body {
     width: 300px;
     height: 150px;
     background-color: var(--light-blue);
-    border-radius: 20px;
+    border-radius: var(--border-radius-large);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -347,263 +351,263 @@ body {
 
 @media (max-width: 390px) {
     .big-box {
-        margin-top: 20px;
+        margin-top: var(--margin-medium);
         width: 100px;
-       background-color: transparent;
+      background-color: transparent;
     }
 }
 
 /* Crud box */
 .custom-div {
-    margin-top: 50px;
-    color: var(--black);
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: var(--font-family-montserrat);
-  }
-  
-  .custom-div button {
-    cursor: pointer;
-  }
-  
-  .custom-div .crud {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    margin: 20px;
-    border-radius: 10px;
-    background: var(--light-blue);
-    overflow: hidden;
-  }
-  
-  .custom-div .diary-task {
-    min-height: 70px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px;
-  }
-  
-  .custom-div .diary-task span {
-    font-weight: 900;
-    font-size: 20px;
-    word-break: break-all;
-  }
-  
-  .custom-div #btn-add {
-    font-size: 20px;
-    font-weight: 500;
-    width: 30px;
-    border-radius: 5px;
-    border: none;
-    color: var(--white);
-    background-color: var(--darker-blue);
-  }
-  
-  .custom-div #btn-add:hover {
-    background-color:var(--black);
-  }
-  
-  .table {
-    width: 100%;
-    border-spacing: 10px;
-    word-break: break-all;
-    border-collapse: collapse;
-  }
+  margin-top: var(--margin-larger);
+  color: var(--black);
+  width: 100%;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-family-montserrat);
+}
 
-  .custom-div .table-container {
-    padding: 10px;
-    height: calc(100% - 70px);
-    overflow-y: auto;
-  }
-  
-  .custom-div table {
-    width: 100%;
-    word-break: break-all;
-    border-collapse: collapse;
-  }
-  
-  .custom-div thead {
-    background-color: var(--darker-blue);
-    color: var(--white);
-  }
-  
-  .custom-div tr {
-    border-bottom: 1px solid var(--modal-footer-button-secondary-background) !important;
-  }
-  
-  .custom-div tbody tr td {
-    padding: 20px;
-  }
-  
-  .custom-div thead tr th {
-    padding: 20px;
-    text-align: center;
-  }
+.custom-div button {
+  cursor: pointer;
+}
 
-  #date-th {
-    border-top-left-radius: 4px;
-    border-bottom-left-radius: 4px;
-    overflow: hidden; 
-  }
-  
-  #delete-th {
-    border-top-right-radius: 4px;
-    border-bottom-right-radius: 4px;
-    overflow: hidden;
-  }
-  
-  .custom-div tbody tr {
-    text-align: center;
-  }
-  
-  .custom-div thead tr th.action {
-    width: 100px;
-    text-align: center;
-  }
-  
-  .custom-div tbody tr td.action {
-    text-align: center;
-  }
-  
-  /* Modal inside the box */
-  .custom-div .modal-container {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: var(--modal-background);
-    display: none;
-    z-index: 99;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .custom-div .modal {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 50px;
-    background-color: var(--modal-inside-white);
-    border-radius: 10px;
-    width: 50%;
-  }
-  
-  .custom-div .modal label {
-    font-size: 15px;
-    width: 100%;
-  }
-  
-  .custom-div .modal input {
-    width: 100%;
-    outline: none;
-    padding-top: 10px;
-    margin-bottom: 20px;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-  }
-  
-  .custom-div .modal button {
-    width: 100%;
-    margin: 10px auto;
-    outline: none;
-    border-radius: 16px;
-    padding: 5px 10px;
-    border: none;
-    background-color: var(--darker-blue);
-    color:  var(--white);
-  }
-  
-  .custom-div .modal button:hover {
-    background-color: var(--black);
-  }
-  
-  .custom-div .active {
-    display: flex;
-  }
-  
-  .custom-div .active .modal {
-    animation: modal .4s;
-  }
-  
-  /* Edit and delete button */
-  .custom-div td button {
-    border: none;
-    outline: none;
-    background: transparent;
-  }
-  
-  .custom-div td button i {
-    font-size: 24px;
-  }
-  
-  .custom-div td button i:first-child {
-    margin-right: 10px;
-  }
+.custom-div .crud {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: var(--margin-medium);
+  border-radius: var(--border-radius-medium);
+  background: var(--light-blue);
+  overflow: hidden;
+}
+
+.custom-div .diary-task {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px;
+}
+
+.custom-div .diary-task span {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--font-size-medium);
+  word-break: break-all;
+}
+
+.custom-div #btn-add {
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-bold);
+  width: 30px;
+  border-radius: var(--border-radius-small);
+  border: none;
+  color: var(--white);
+  background-color: var(--darker-blue);
+}
+
+.custom-div #btn-add:hover {
+  background-color:var(--black);
+}
+
+.table {
+  width: 100%;
+  border-spacing: 10px;
+  word-break: break-all;
+  border-collapse: collapse;
+}
+
+.custom-div .table-container {
+  padding: var(--padding-small);
+  height: calc(100% - 70px);
+  overflow-y: auto;
+}
+
+.custom-div table {
+  width: 100%;
+  word-break: break-all;
+  border-collapse: collapse;
+}
+
+.custom-div thead {
+  background-color: var(--darker-blue);
+  color: var(--white);
+}
+
+.custom-div tr {
+  border-bottom: 1px solid var(--modal-footer-button-secondary-background) !important;
+}
+
+.custom-div tbody tr td {
+  padding: var(--padding-medium);
+}
+
+.custom-div thead tr th {
+  padding: var(--padding-medium);
+  text-align: center;
+}
+
+#date-th {
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  overflow: hidden; 
+}
+
+#delete-th {
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  overflow: hidden;
+}
+
+.custom-div tbody tr {
+  text-align: center;
+}
+
+.custom-div thead tr th.action {
+  width: 100px;
+  text-align: center;
+}
+
+.custom-div tbody tr td.action {
+  text-align: center;
+}
+
+/* Modal inside the box */
+.custom-div .modal-container {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--modal-background);
+  display: none;
+  z-index: 99;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-div .modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--padding-larger);
+  background-color: var(--modal-inside-white);
+  border-radius: var(--border-radius-medium);
+  width: 50%;
+}
+
+.custom-div .modal label {
+  font-size: var(--font-size-default);
+  width: 100%;
+}
+
+.custom-div .modal input {
+  width: 100%;
+  outline: none;
+  padding-top: var(--padding-small);
+  margin-bottom: var(--margin-medium);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+.custom-div .modal button {
+  width: 100%;
+  margin: 10px auto;
+  outline: none;
+  border-radius: var(--border-radius-huge);
+  padding: 5px 10px;
+  border: none;
+  background-color: var(--darker-blue);
+  color:  var(--white);
+}
+
+.custom-div .modal button:hover {
+  background-color: var(--black);
+}
+
+.custom-div .active {
+  display: flex;
+}
+
+.custom-div .active .modal {
+  animation: modal .4s;
+}
+
+/* Edit and delete button */
+.custom-div td button {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
+.custom-div td button i {
+  font-size: var(--font-size-svg);
+}
+
+.custom-div td button i:first-child {
+  margin-right: var(--margin-small);
+}
 
 
-  /* Responsive adjustments for text size and overflow */
+/* Responsive adjustments for text size and overflow */
 @media (max-width: 1024px) {
-    .custom-div .diary-task span {
-      font-size: 20px;
-    }
-  
-    .custom-div tbody tr td, .custom-div thead tr th {
-      font-size: 16px;
-    }
-    
-    .custom-div .modal label, .custom-div .modal input {
-      font-size: 16px;
-    }
+  .custom-div .diary-task span {
+    font-size: var(--font-size-medium);
+  }
+
+  .custom-div tbody tr td, .custom-div thead tr th {
+    font-size: var(--font-size-default);
   }
   
-  @media (max-width: 390px) {
-    .custom-div .diary-task span {
-      font-size: 16px;
-    }
-  
-    .custom-div tbody tr td, .custom-div thead tr th {
-      font-size: 12px;
-    }
-    
-    .custom-div .modal label, .custom-div .modal input {
-      font-size: 12px;
-    }
-  
-    .custom-div .modal button {
-      font-size: 12px;
-    }
+  .custom-div .modal label, .custom-div .modal input {
+    font-size: var(--font-size-default);
+  }
+}
+
+@media (max-width: 390px) {
+  .custom-div .diary-task span {
+    font-size: var(--font-size-default);
+  }
+
+  .custom-div tbody tr td, .custom-div thead tr th {
+    font-size: var(--font-size-smaller);
   }
   
-  /* Enable horizontal overflow for text */
-  .custom-div .diary-task span, 
-  .custom-div tbody tr td, 
-  .custom-div thead tr th {
-    white-space: nowrap;
-    word-break: break-all;
-    border-collapse: collapse;
+  .custom-div .modal label, .custom-div .modal input {
+    font-size: var(--font-size-smaller);
   }
-  
-  .custom-div tbody tr td.description {
-    word-wrap: break-word;
-    overflow-wrap: break-word; 
-    word-break: break-word; 
-    white-space: normal; 
+
+  .custom-div .modal button {
+    font-size: var(--font-size-smaller);
   }
-  
+}
+
+/* Enable horizontal overflow for text */
+.custom-div .diary-task span, 
+.custom-div tbody tr td, 
+.custom-div thead tr th {
+  white-space: nowrap;
+  word-break: break-all;
+  border-collapse: collapse;
+}
+
+.custom-div tbody tr td.description {
+  word-wrap: break-word;
+  overflow-wrap: break-word; 
+  word-break: break-word; 
+  white-space: normal; 
+}
+
 
 /* Footer */
 footer {
-    padding: var(--footer-padding);
+    padding: var(--padding-medium);
     background-color: #545F71;
     font-family: var(--font-family-montserrat);
-    font-size: var(--footer-font-size);
+    font-size: var(--font-size-default);
     color: var(--white);
-    margin-top: auto; /* Push footer to bottom */
+    margin-top: var(--margin-auto); 
 }
 
 .svg-icon {
@@ -624,7 +628,7 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: var(--gap-medium);
+    padding-top: var(--padding-medium);
     color: var(--white);
 }
 
@@ -651,17 +655,16 @@ a {
 
     .social-link {
         flex-direction: column;
-        align-items: start;
+        align-items: center;
     }
 
     .svg-icon {
-        margin-top: var(--gap-medium); /* Optional: Adjust spacing */
+        margin-top: var(--margin-medium);
     }
 
     .personal-info {
-        flex-direction: column;
         align-items: start;
-        padding-top: 0px;
+        padding-top: var(--padding-default);
     }
 }
 
