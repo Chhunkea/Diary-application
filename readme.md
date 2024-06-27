@@ -4,7 +4,10 @@
 
  Design Prototype and re-develop a user-friendly and visually captivating clone of the Diary Web Application frontend platform, and ensures seamless compatibility across multiple devices and screen sizes.
 
-![alt text](/asset/readme-image/diary-book.avif)
+<div align="center">
+    <img src="/asset/readme-image/diary-book.png" alt="diary book" width="200" height="200">
+</div>
+
 
 # Development Tools :
 
