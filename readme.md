@@ -8,11 +8,9 @@
 
 # Development Tools :
 
-![vs.webp](https://prod-files-secure.s3.us-west-2.amazonaws.com/d09f4b93-28fa-4ab8-bf9f-1e1f34adf896/2e23953c-3b96-4497-9308-75e614b869df/vs.webp)
-
-![g.webp](https://prod-files-secure.s3.us-west-2.amazonaws.com/d09f4b93-28fa-4ab8-bf9f-1e1f34adf896/1040b696-8dbb-49f7-923c-c43257ac2683/g.webp)
-
-![f.webp](https://prod-files-secure.s3.us-west-2.amazonaws.com/d09f4b93-28fa-4ab8-bf9f-1e1f34adf896/32a582d4-9b44-4c00-9a0f-0c7fc5dbe29d/f.webp)
+![alt text](/asset/readme-image/vscode-logo.webp)
+![alt text](/asset/readme-image/gitlab-logo.webp)
+![alt text](/asset/readme-image/figma-logo.webp)
 
 - **`Visual Studio Code (VSCode)`:** A powerful and versatile code editor that provides an excellent development environment with features like syntax highlighting, debugging support, and extensions for enhanced productivity.
 - **`GitLab`:** A web-based Git repository manager that offers version control, issue tracking, and continuous integration/continuous deployment (CI/CD) pipelines, facilitating collaborative software development.
