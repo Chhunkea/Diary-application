@@ -25,7 +25,7 @@
 <div align="center">
   <img src="/asset/readme-image/review-board.webp" alt="review board" width="100" height="100">
   <img src="/asset/readme-image/anb-logo.png" alt="anb Logo" width="100" height="100">
-  <img src="/asset/readme-image/notion-logo.png" alt="notion Logo" width="100" height="100">
+  <img src="/asset/readme-image/notion-logo.png" alt="notion Logo" width="50" height="50">
 </div>
 
 - **`ANB community` : Maintain daily or weekly notes on tasks completed, tasks pending, and any obstacles. Use it as a self-scrum tool to keep your project on track.**
