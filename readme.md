@@ -8,13 +8,9 @@
 
 # Development Tools :
 
-![alt text](/asset/readme-image/vscode-logo.webp)
-![alt text](/asset/readme-image/gitlab-logo.webp)
-![alt text](/asset/readme-image/figma-logo.webp)
-
 <div align="center">
   <img src="/asset/readme-image/vscode-logo.webp" alt="VS Code Logo" width="100" height="100">
-  <img src="/asset/readme-image/gitlab-logo.webp" alt="GitLab Logo" width="100" height="100">
+  <img src="/asset/readme-image/gitlab-logo.webp" alt="GitLab Logo" width="150"   height="150">
   <img src="/asset/readme-image/figma-logo.webp" alt="Figma Logo" width="100" height="100">
 </div>
 
