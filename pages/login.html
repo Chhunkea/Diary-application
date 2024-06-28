@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/style/login.css">
+    <script src="../src/script/loginPage.js" defer></script>
+    <title>Login page</title>
+</head>
+<body>
+
+    <!-- Main container: Login page -->
+    <div class="main-login">
+        <div class="left-login">
+            <h1>Log in<br>to your Diary 📖</h1>
+            <img src="/asset/login-image/hover.svg" class="left-login-image" alt="Animated image">
+        </div>
+
+        <!-- Section: right section of the login page -->
+        <div class="right-login">
+            <div class="card-login">
+                <h1>LOGIN</h1>
+                <div class="textfield">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" required placeholder="Username">
+                </div>
+
+                 <!-- Container: for the password input field -->
+                <div class="textfield">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required placeholder="123">
+                </div>
+                <button class="btn-login" id="login-button">LOGIN</button>
+
+                <div class="btn-plus">
+                    <a class="sign-up">Don't have an account? <span class="span-sign-up">Sign Up</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

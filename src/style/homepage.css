@@ -1,77 +1,8 @@
-/* Import font */
-@import url(/src/style/font-family.css);
+/* Import: import font */
+@import url(./font-family.css);
 
-/* Define CSS variables */
-:root {
-     /* Font family */
-    --font-family-montserrat: 'Montserrat', sans-serif;
-    --font-family-raleway: 'Raleway', sans-serif;
-
-    /* Font weight */
-    --font-weight-bold: bold;
-    --font-weight-normal: normal;
-
-    /* border radius */
-    --profile-pic-size: 40px;
-    --border-radius-small: 5px;
-    --border-radius-medium: 10px;
-    --border-radius-huge: 16px;
-    --border-radius-large: 20px;
-    --border-radius-round: 50%;
-
-    /* Font size */
-    --font-size-smallest: 8px;
-    --font-size-smaller: 12px;
-    --font-size-default: 16px;
-    --font-size-huge: 18px;
-    --font-size-medium: 20px;
-    --font-size-svg: 24px;
-    --font-size-large: 36px;
-    --font-size-larger: 50px;
-  
-    /* Gap */
-    --gap-small: 10px;
-    --gap-medium: 20px;
-    --gap-large: 30px;
-
-    /* Margin */
-    --margin-negative: -10%;
-    --margin-default: 0px;
-    --margin-small: 10px;
-    --margin-medium: 20px;
-    --margin-large: 30px;
-    --margin-larger: 50px;
-    --margin-auto: auto;
-
-    /* Padding */
-    --padding-default: 0px;
-    --padding-small: 10px;
-    --padding-medium: 20px;
-    --padding-large: 30px;
-    --padding-larger: 50px;
-
-    /* Clock sizing*/
-    --clock-width-desktop: 400px;
-    --clock-height-desktop: 100px;
-    --clock-width-tablet: 300px;
-    --clock-height-tablet: 80px;
-    --clock-width-mobile: 250px;
-    --clock-height-mobile: 60px;
-
-     /* colors */
-     --modal-inside-white: #fff;
-     --white: #f5f5f5;
-     --background-color: #4E8FE7;
-     --dark-blue: #050C9C;
-     --darker-blue:  #0056b3;
-     --blue: #3573EF;
-     --gray: #545F71;
-     --wavy-blue: #3ABEF9;
-     --light-blue: #A7E6FF;
-     --black: #0c0c0c;
-     --modal-background: rgb(0, 0, 0, 0.5);
-     --clock-background: rgba(0, 0, 0, 0.319);
-}
+/* Import: import root */
+@import url(./root.css);
 
 /* Body: full body content style */
 #full-content {
@@ -504,6 +435,7 @@ body {
 .custom-div .modal input {
   width: 100%;
   outline: none;
+  font-family: var(--font-family-montserrat);
   padding-top: var(--padding-small);
   margin-bottom: var(--margin-medium);
   border-top: none;
@@ -598,7 +530,6 @@ body {
   word-break: break-word; 
   white-space: normal; 
 }
-
 
 /* Footer */
 footer {

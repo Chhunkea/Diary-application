@@ -1,0 +1,5 @@
+REVIEWBOARD_URL = "https://review.clp.kr/"
+REPOSITORY = "CyberNexus/Kim-Chhunkea/Diary-Web"
+REPOSITORY_TYPE = "git"
+BRANCH = "feature/sign-in"
+LAND_DEST_BRANCH = "feature/sign-in"
