@@ -91,20 +91,25 @@
 
 # Style Guides:
 
-**Colors:**
+**Colors**:
 
-- Modal inside white: #fff
+- Modal Inside White: #fff
 - White: #f5f5f5
-- Background color: #4E8FE7
-- Dark blue: #050C9C
-- Darker blue: #0056b3
+- Pure White: #f0ffffde
+- Azure White: #f0ffff94
+- Background Color: #4E8FE7
+- Dark Blue: #050C9C
+- Darker Blue: #0056b3
 - Blue: #3573EF
 - Gray: #545F71
-- Wavy blue: #3ABEF9
-- Light blue: #A7E6FF
+- Light Gray: #514869
+- Wavy Blue: #3ABEF9
+- Light Blue: #A7E6FF
+- Dark Purple: #2f2841
+- Box Shadow Purple: hsla(246, 52%, 35%, 0.337)
 - Black: #0c0c0c
-- Modal background: rgba(0, 0, 0, 0.5)
-- Clock background: rgba(0, 0, 0, 0.319)
+- Modal Background: rgba(0, 0, 0, 0.5)
+- Clock Background: rgba(0, 0, 0, 0.319)
 
 **Font family:**
 
@@ -252,8 +257,6 @@ ANB School.
 - Flow guide document: 
 
 - IA: 
-
-- Hosting website: 
 
 - Remote repo: https://git.clp.kr/anbschool/2nd/cybernexus/kim-chhunkea/diary-personal-project.git
 
