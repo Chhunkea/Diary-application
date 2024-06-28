@@ -1,7 +1,7 @@
-/* Import font */
+/* Import: import font */
 @import url(./font-family.css);
 
-/* Import root */
+/* Import: import root */
 @import url(./root.css);
 
 /* Body: full body content style */
@@ -435,6 +435,7 @@ body {
 .custom-div .modal input {
   width: 100%;
   outline: none;
+  font-family: var(--font-family-montserrat);
   padding-top: var(--padding-small);
   margin-bottom: var(--margin-medium);
   border-top: none;
@@ -529,7 +530,6 @@ body {
   word-break: break-word; 
   white-space: normal; 
 }
-
 
 /* Footer */
 footer {
