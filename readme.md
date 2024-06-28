@@ -216,11 +216,6 @@ Classes, function and variable naming.
 
 - Each block of CSS code must contain a comment with the section and a description of the section. e.g: Section 1: meaning/description
 
-# CSS Styling & Framework :
-
-- **Tailwinds-CSS** : utility-first CSS framework for rapidly building modern websites without ever leaving your HTML.
-- **CSS Styling** : Do not write inline style or external styles that are not needed.
-
 # Version Control:
 <div align="center">
     <img src="/asset/readme-image/git-flow.webp" alt="git flow" width="500" height="500">
