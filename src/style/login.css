@@ -1,11 +1,15 @@
+/* Import: import font family */
+@import url(./font-family.css);
 
-@import url(/src/style/font-family.css);
+/* Import: import root */
+@import url(./root.css);
+
 body {
     margin: 0;
-    font-family: "Montserrat", sans-serif;
+    font-family: var(--font-family-montserrat);
 }
 
-body * {
+* {
     box-sizing: border-box;
 }
 
@@ -18,8 +22,8 @@ body * {
     align-items: center;
     background-size: cover;
     background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
+    margin: var( --margin-default);
+    padding: var( --padding-default);
 }
 
 .left-login {
@@ -32,8 +36,8 @@ body * {
 }
 
 .left-login > h1 { 
-    font-size: 3vw;
-    color: #A7E6FF;
+    font-size: var(--font-size-large);
+    color: var(--light-blue);
     max-width: 50%;
 }
 
@@ -57,14 +61,14 @@ body * {
     align-items: center;
     flex-direction: column;
     padding: 30px 35px; 
-    background: #2f2841;
-    border-radius: 20px;
-    box-shadow: 0px 10px 40px #00000056; 
+    background: var(--dark-purple);
+    border-radius: var(--border-radius-large);
+    box-shadow: 0px 10px 40px var(--box-shadow-purple); 
 }
 
 .card-login > h1 { 
     color:  #3ABEF9;
-    font-weight: 800;
+    font-weight: var(--font-weight-bold);
     margin: 0;
 }
 
@@ -80,23 +84,23 @@ body * {
 .textfield > input {
     width: 100%;
     border: none;
-    border-radius: 10px;
-    padding: 15px;
-    background: #514869;
-    color: #fff;
-    font-size: 16px;
-    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.319);
+    border-radius: var(--border-radius-medium);
+    padding: var( --padding-box);
+    background:var(--light-gray);
+    color: var(--white);
+    font-size: var(--font-size-default);
+    box-shadow: 0px 10px 40px var(--modal-background);
     outline: none;
     box-sizing: border-box;
 }
 
 .textfield > label {
-    color: #f0ffffde;
-    margin-bottom: 10px;
+    color: var(--pure-white);
+    margin-bottom: var(--margin-small);
 }
 
 .textfield > input::placeholder {
-    color: #f0ffff94;
+    color: var(--azure-white);
 }
 
 .btn-login {
@@ -107,36 +111,37 @@ body * {
     border-radius: 8px;
     outline: none;
     text-transform: uppercase;
-    font-weight: 800;
+    font-weight: var(--font-weight-bold);
     letter-spacing: 3px;
-    color: black;
-    background: #3573EF;
+    color: var(--black);
+    background: var(--blue);
     cursor: pointer;
-    box-shadow: 0px 10px 40px -12px black;
+    box-shadow: 0px 10px 40px -12px var(--black);
 }
 
 .sign-up {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: var(--font-family-raleway);
     text-transform: uppercase;
     text-decoration: none;
-    letter-spacing: 2px;
-    color: white;
+    letter-spacing: 1px;
+    color: var(--white);
 }
 
 .span-sign-up {
-    color: #3573EF;
+    color: var(--blue);
+    cursor: pointer;
 }
 
-@media only screen and (max-width: 950px) {
+@media (max-width: 950px) {
     .card-login {
         width: 85%;
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media (max-width: 600px) {
     .main-login {
         flex-direction: column;
-        padding-bottom: 30px;
+        padding-bottom: var(--padding-medium);
     }
 
     .left-login > h1 {
