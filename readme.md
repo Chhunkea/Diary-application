@@ -5,28 +5,26 @@
  Design Prototype and re-develop a user-friendly and visually captivating clone of the Diary Web Application frontend platform, and ensures seamless compatibility across multiple devices and screen sizes.
 
 <div align="center">
-    <img src="/asset/readme-image/diary-book.png" alt="diary book" width="300" height="300">
+    <img src="./asset/readme-image/diary-book.png" alt="diary book" width="300" height="300">
 </div>
 
 
 # Development Tools :
 
-<div align="center">
-  <img src="/asset/readme-image/vscode-logo.webp" alt="VS Code Logo" width="100" height="100">
-  <img src="/asset/readme-image/gitlab-logo.webp" alt="GitLab Logo" width="200"   height="200">
-  <img src="/asset/readme-image/figma-logo.webp" alt="Figma Logo" width="100" height="100">
-</div>
+
+<img src="./asset/readme-image/vscode-logo.webp" alt="VS Code Logo" width="50" height="50">
+<img src="./asset/readme-image/gitlab-logo.webp" alt="GitLab Logo" width="100"   height="100">
+<img src="./asset/readme-image/figma-logo.webp" alt="Figma Logo" width="50" height="50">
 
 - **`Visual Studio Code (VSCode)`:** A powerful and versatile code editor that provides an excellent development environment with features like syntax highlighting, debugging support, and extensions for enhanced productivity.
 - **`GitLab`:** A web-based Git repository manager that offers version control, issue tracking, and continuous integration/continuous deployment (CI/CD) pipelines, facilitating collaborative software development.
 - **`Figma`:** An innovative design tool used for creating user interfaces, prototypes, and collaborative design projects.
 
 # Communication tools :
-<div align="center">
-  <img src="/asset/readme-image/anb-image.png" alt="anb Logo" width="150" height="150">
-  <img src="/asset/readme-image/review-board.webp" alt="review board" width="150" height="150">
-  <img src="/asset/readme-image/notion-logo.png" alt="notion Logo" width="80" height="80">
-</div>
+
+<img src="./asset/readme-image/anb-image.png" alt="anb Logo" width="60" height="60">
+<img src="./asset/readme-image/review-board.webp" alt="review board" width="50" height="50">
+<img src="./asset/readme-image/notion-logo.png" alt="notion Logo" width="30" height="30">
 
 - **`ANB community` : Maintain daily or weekly notes on tasks completed, tasks pending, and any obstacles. Use it as a self-scrum tool to keep your project on track.**
 - **`Peer Review Board` : invite feedback from mentors, friends, or online coding communities to enhance your code quality.**
@@ -72,7 +70,7 @@
 # Project structure :
 
 <div align="center">
-    <img src="/asset/readme-image/project-structure.png" alt="project structure" width="300" height="300">
+    <img src="./asset/readme-image/project-structure.png" alt="project structure" width="300" height="300">
 </div>
 
 ## **Description:**
@@ -91,20 +89,25 @@
 
 # Style Guides:
 
-**Colors:**
+**Colors**:
 
-- Modal inside white: #fff
+- Modal Inside White: #fff
 - White: #f5f5f5
-- Background color: #4E8FE7
-- Dark blue: #050C9C
-- Darker blue: #0056b3
+- Pure White: #f0ffffde
+- Azure White: #f0ffff94
+- Background Color: #4E8FE7
+- Dark Blue: #050C9C
+- Darker Blue: #0056b3
 - Blue: #3573EF
 - Gray: #545F71
-- Wavy blue: #3ABEF9
-- Light blue: #A7E6FF
+- Light Gray: #514869
+- Wavy Blue: #3ABEF9
+- Light Blue: #A7E6FF
+- Dark Purple: #2f2841
+- Box Shadow Purple: hsla(246, 52%, 35%, 0.337)
 - Black: #0c0c0c
-- Modal background: rgba(0, 0, 0, 0.5)
-- Clock background: rgba(0, 0, 0, 0.319)
+- Modal Background: rgba(0, 0, 0, 0.5)
+- Clock Background: rgba(0, 0, 0, 0.319)
 
 **Font family:**
 
@@ -211,14 +214,9 @@ Classes, function and variable naming.
 
 - Each block of CSS code must contain a comment with the section and a description of the section. e.g: Section 1: meaning/description
 
-# CSS Styling & Framework :
-
-- **Tailwinds-CSS** : utility-first CSS framework for rapidly building modern websites without ever leaving your HTML.
-- **CSS Styling** : Do not write inline style or external styles that are not needed.
-
 # Version Control:
 <div align="center">
-    <img src="/asset/readme-image/git-flow.webp" alt="git flow" width="500" height="500">
+    <img src="./asset/readme-image/git-flow.webp" alt="git flow" width="500" height="500">
 </div>
 
 ## Issue naming convention :
@@ -249,11 +247,9 @@ ANB School.
 
 - Figma (UI Screen, UI Prototype, Flow planning): https://www.figma.com/design/ckU2aZuSrS1cyeEljrmbbe/Diary-Web-Application?node-id=3-4&t=Q9en28xFuWcgEJhL-1
 
-- Flow guide document: 
+- Flow guide document: https://www.figma.com/design/YmxZn9s64KgcNIox2U0AHf/Flow-guide?node-id=0-1&t=9cPKL7IukpS64fwX-1
 
-- IA: 
-
-- Hosting website: 
+- IA: https://www.figma.com/board/kU1LdQMWRIs2gG1GN4KyFp/Diary-figjam?node-id=0-1&t=lwzTJ0NFjXp5E1Sp-1
 
 - Remote repo: https://git.clp.kr/anbschool/2nd/cybernexus/kim-chhunkea/diary-personal-project.git
 

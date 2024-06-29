@@ -596,6 +596,7 @@ a {
     .personal-info {
         align-items: start;
         padding-top: var(--padding-default);
+        font-size: var(--font-size-smaller);
     }
 }
 

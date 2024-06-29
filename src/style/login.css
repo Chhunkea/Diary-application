@@ -67,7 +67,7 @@ body {
 }
 
 .card-login > h1 { 
-    color:  #3ABEF9;
+    color:  var(--wavy-blue);
     font-weight: var(--font-weight-bold);
     margin: 0;
 }
@@ -121,6 +121,7 @@ body {
 
 .sign-up {
     font-family: var(--font-family-raleway);
+    font-weight: var( --font-weight-bold);
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 1px;
