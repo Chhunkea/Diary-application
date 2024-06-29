@@ -249,7 +249,7 @@ ANB School.
 
 - Figma (UI Screen, UI Prototype, Flow planning): https://www.figma.com/design/ckU2aZuSrS1cyeEljrmbbe/Diary-Web-Application?node-id=3-4&t=Q9en28xFuWcgEJhL-1
 
-- Flow guide document: 
+- Flow guide document: https://www.figma.com/design/YmxZn9s64KgcNIox2U0AHf/Flow-guide?node-id=0-1&t=9cPKL7IukpS64fwX-1
 
 - IA: https://www.figma.com/board/kU1LdQMWRIs2gG1GN4KyFp/Diary-figjam?node-id=0-1&t=lwzTJ0NFjXp5E1Sp-1
 
