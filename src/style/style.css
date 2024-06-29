@@ -1,0 +1,117 @@
+/* Import: import font family */
+@import url(./font-family.css);
+
+/* Import: import root */
+@import url(./root.css);
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: var(--margin-default);
+    padding: var(--padding-default);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+body {
+    box-sizing: border-box;
+    padding: var(--padding-medium);
+    background-image: url(/asset/image-landing-page/Desktop-background-landing-page.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+h1 {
+    font-family: var(--font-family-memoirs);
+    font-weight: var(--font-weight-bold);
+    font-size: var(--font-size-larger);
+    margin: var(--margin-medium);
+}
+
+.border {
+    margin-top: var(--margin-top);
+}
+
+button {
+    padding: var(--button-padding);
+    border-radius: var(--border-radius-large);
+    border: 2px solid var(--white);
+    background-color: var(--wavy-blue);
+    cursor: pointer;
+    font-size: 24px;
+    font-family: var(--font-family-raleway);
+    display: flex;
+    align-items: center;
+}
+
+button a {
+    color: #FFF;
+    text-decoration: none;
+    font-weight: var(--font-weight-bold);
+    display: flex;
+    align-items: center;
+}
+
+button:hover {
+    background-color: var(--black);
+}
+
+.arrow-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: var(--margin-small);
+}
+
+footer {
+    text-align: end;
+    padding: var(--padding-medium);
+    width: 100%;
+    font-family: var(--font-family-montserrat);
+    font-weight: 100;
+    font-style: normal;
+    margin: var(--margin-default);
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: var(--font-size-largest);
+    }
+    button {
+        font-size: var(--font-size-large);
+    }
+    .arrow-icon {
+        width: 32px;
+        height: 32px;
+    }
+    footer {
+        font-size: var(--font-size-svg);
+    }
+}
+
+@media (min-width: 1920px) {
+    h1 {
+        font-size: var(--font-size-max);
+    }
+    button {
+        font-size: var( --font-size-large-mid);
+    }
+    .arrow-icon {
+        width: 48px;
+        height: 48px;
+    }
+}
