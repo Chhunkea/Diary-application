@@ -251,7 +251,7 @@ ANB School.
 
 - Flow guide document: 
 
-- IA: 
+- IA: https://www.figma.com/board/kU1LdQMWRIs2gG1GN4KyFp/Diary-figjam?node-id=0-1&t=lwzTJ0NFjXp5E1Sp-1
 
 - Remote repo: https://git.clp.kr/anbschool/2nd/cybernexus/kim-chhunkea/diary-personal-project.git
 
