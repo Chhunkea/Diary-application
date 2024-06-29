@@ -579,7 +579,7 @@ a {
     text-decoration: none;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 500px) {
     .social-link img {
         width: 120px;
     }
