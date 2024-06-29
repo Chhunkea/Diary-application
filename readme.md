@@ -5,27 +5,26 @@
  Design Prototype and re-develop a user-friendly and visually captivating clone of the Diary Web Application frontend platform, and ensures seamless compatibility across multiple devices and screen sizes.
 
 <div align="center">
-    <img src="/asset/readme-image/diary-book.png" alt="diary book" width="300" height="300">
+    <img src="./asset/readme-image/diary-book.png" alt="diary book" width="300" height="300">
 </div>
 
 
 # Development Tools :
 
 
-<img src="/asset/readme-image/vscode-logo.webp" alt="VS Code Logo" width="50" height="50">
-<img src="/asset/readme-image/gitlab-logo.webp" alt="GitLab Logo" width="100"   height="100">
-<img src="/asset/readme-image/figma-logo.webp" alt="Figma Logo" width="50" height="50">
+<img src="./asset/readme-image/vscode-logo.webp" alt="VS Code Logo" width="50" height="50">
+<img src="./asset/readme-image/gitlab-logo.webp" alt="GitLab Logo" width="100"   height="100">
+<img src="./asset/readme-image/figma-logo.webp" alt="Figma Logo" width="50" height="50">
 
 - **`Visual Studio Code (VSCode)`:** A powerful and versatile code editor that provides an excellent development environment with features like syntax highlighting, debugging support, and extensions for enhanced productivity.
 - **`GitLab`:** A web-based Git repository manager that offers version control, issue tracking, and continuous integration/continuous deployment (CI/CD) pipelines, facilitating collaborative software development.
 - **`Figma`:** An innovative design tool used for creating user interfaces, prototypes, and collaborative design projects.
 
 # Communication tools :
-<div align="center">
-  <img src="/asset/readme-image/anb-image.png" alt="anb Logo" width="150" height="150">
-  <img src="/asset/readme-image/review-board.webp" alt="review board" width="150" height="150">
-  <img src="/asset/readme-image/notion-logo.png" alt="notion Logo" width="80" height="80">
-</div>
+
+<img src="./asset/readme-image/anb-image.png" alt="anb Logo" width="50" height="50">
+<img src="./asset/readme-image/review-board.webp" alt="review board" width="50" height="50">
+<img src="./asset/readme-image/notion-logo.png" alt="notion Logo" width="50" height="50">
 
 - **`ANB community` : Maintain daily or weekly notes on tasks completed, tasks pending, and any obstacles. Use it as a self-scrum tool to keep your project on track.**
 - **`Peer Review Board` : invite feedback from mentors, friends, or online coding communities to enhance your code quality.**
@@ -71,7 +70,7 @@
 # Project structure :
 
 <div align="center">
-    <img src="/asset/readme-image/project-structure.png" alt="project structure" width="300" height="300">
+    <img src="./asset/readme-image/project-structure.png" alt="project structure" width="300" height="300">
 </div>
 
 ## **Description:**
@@ -217,7 +216,7 @@ Classes, function and variable naming.
 
 # Version Control:
 <div align="center">
-    <img src="/asset/readme-image/git-flow.webp" alt="git flow" width="500" height="500">
+    <img src="./asset/readme-image/git-flow.webp" alt="git flow" width="500" height="500">
 </div>
 
 ## Issue naming convention :
